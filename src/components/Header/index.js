@@ -25,7 +25,12 @@ const Header = () => {
                 <Typography variant="h6" color="primary" sx={{ flexGrow: 1 }} >
                     HPC
                 </Typography>
-                <Button color="primary">Inicio</Button>
+                <Button
+                    color="primary"
+                    href={'/'}
+                >
+                    Inicio
+                </Button>
                 <Button color="primary">Acerca de</Button>
                 <Button color="primary">Servicios</Button>
                 <Button color="primary">Noticias</Button>
