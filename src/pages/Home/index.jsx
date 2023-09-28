@@ -4,12 +4,9 @@ import {Avatar, Button} from "@mui/material";
 
 const Home = () => {
   return (
-      <>
-        <Button
-            variant="contained"
-            sx={{ backgroundColor: 'red', color: 'white'}}
-        >HOLA</Button>
-      </>
+    <div>
+      HOLA MUNDOAAAAAAAA
+    </div>
   );
 };
 
