@@ -35,7 +35,7 @@ const Login = () => {
                 sm={4}
                 md={7}
                 style={{
-                    backgroundImage: 'url(https://wallpapercave.com/wp/wp12040786.png)',
+                    backgroundImage: 'url(https://images.adsttc.com/media/images/61f3/16c3/c675/1930/e90d/9058/slideshow/1-aerea-ok.jpg?1643321063)',
                     backgroundRepeat: 'no-repeat',
                     backgroundColor: (t) =>
                         t.palette.mode === 'light'
