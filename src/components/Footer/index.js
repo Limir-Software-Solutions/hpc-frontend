@@ -17,9 +17,10 @@ const Footer = () => {
         <AppBar position="static" sx={{ backgroundColor: 'black' }}>
             <Toolbar>
                 <Typography variant="body1" color="inherit" sx={{ flexGrow: 1 }}>
-                    HPC UOH High Performance Computer
+                    <p>HPC</p> UOH High Performance Computer
                 </Typography>
-                <List dense sx={{ display: 'flex', flexDirection: 'column',marginRight:"1400px" }}>
+                <div className= "justify-center flex my-10">
+                <List dense sx={{ display: 'flex', flexDirection: 'column'}}>
                         <ListItem>
                             <ListItemText primary="Nosotros"
                                         primaryTypographyProps={{ color: '#61dafb' }} />
@@ -35,7 +36,9 @@ const Footer = () => {
                             <ListItemText primary="Publicaciones" />
                         </ListItem>
                     </List>
-                    <List dense sx={{ display: 'flex', flexDirection: 'column',marginRight:"1300px" }}>
+                    </div>
+                    <div className= "justify-center flex my-10">
+                    <List dense sx={{ display: 'flex', flexDirection: 'column'}}>
                         <ListItem>
                             <ListItemText primary="Más"
                                         primaryTypographyProps={{ color: '#61dafb' }} />
@@ -51,7 +54,23 @@ const Footer = () => {
                             <ListItemText primary="Visitas" />
                         </ListItem>
                     </List>    
-                
+                    </div>
+                    <div className= "justify-center flex my-10">
+                    <List dense sx={{ display: 'flex', flexDirection: 'column'}}>
+                        <ListItem>
+                            <ListItemText primary="Información"
+                                        primaryTypographyProps={{ color: '#61dafb' }} />
+                            
+                        </ListItem>
+                        <ListItem>
+                            <ListItemText primary="Contacto" />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemText primary="Soporte" />
+                        </ListItem>
+                        
+                    </List>    
+                    </div>
             </Toolbar>
         </AppBar>
         
