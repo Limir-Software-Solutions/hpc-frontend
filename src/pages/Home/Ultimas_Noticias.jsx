@@ -4,13 +4,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import Stack from '@mui/material/Stack';
 
-export default function Home() {
+export default function ActionAreaCard() {
   return (
-    <div className= "justify-center items-center flex my-16">
-      
-      <Card sx={{ maxWidth: 800 }}>
+    <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -31,8 +28,6 @@ export default function Home() {
           </Typography>
         </CardContent>
       </CardActionArea>
-      </Card>
-   
-      </div>
+    </Card>
   );
 }
