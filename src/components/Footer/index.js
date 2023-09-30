@@ -16,12 +16,20 @@ const Footer = () => {
         <>
         <AppBar position="static" sx={{ backgroundColor: 'black' }}>
             <Toolbar>
-                <Typography variant="body1" color="inherit" sx={{ flexGrow: 1 }}>
-                    <p>HPC</p> UOH High Performance Computer
-                </Typography>
+            <div className= "justify-between flex flex-row my-10 bg-blue-50">
+                <div className= "flex flex-col">
+                <p>
+                    HPC
+                </p>
+                <h1>
+                    UOH High Performance Computer
+                </h1>
+                </div>
+                <div className= "justify-between flex flex-row my-10 bg-blue-50">
                 <div className= "justify-center flex my-10">
                 <List dense sx={{ display: 'flex', flexDirection: 'column'}}>
                         <ListItem>
+
                             <ListItemText primary="Nosotros"
                                         primaryTypographyProps={{ color: '#61dafb' }} />
                             
@@ -71,6 +79,7 @@ const Footer = () => {
                         
                     </List>    
                     </div>
+                    </div></div>
             </Toolbar>
         </AppBar>
         
