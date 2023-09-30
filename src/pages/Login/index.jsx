@@ -1,108 +1,94 @@
-import React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {Container} from "@mui/material";
-
-const defaultTheme = createTheme();
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Login = () => {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
-    };
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState({})
+  const handleSubmit = async e => {
+    e.preventDefault();
+
+    if([email, password].includes('')) {
+      setError({
+        msg: 'Todos los campos son obligatorios',
+        error: true
+      })
+      return
+    }
+
+    try {
+      const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/usuarios/login`,
+        {email, password} );
+      setError({})
+      localStorage.setItem('token', data.token);
+      // setAuth(data);
+      // navigate('/proyectos')
+    } catch (e) {
+      setError({
+        msg: e.response.data.msg,
+        error: true
+      })
+    }
+
+  }
 
     return (
-        <Grid container component="main" style={{ height: '100vh' }}>
-            <CssBaseline />
-            <Grid
-                item
-                xs={false}
-                sm={4}
-                md={7}
-                style={{
-                    backgroundImage: 'url(https://images.adsttc.com/media/images/61f3/16c3/c675/1930/e90d/9058/slideshow/1-aerea-ok.jpg?1643321063)',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundColor: (t) =>
-                        t.palette.mode === 'light'
-                            ? t.palette.grey[50]
-                            : t.palette.grey[900],
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                }}
+        <>
+          <div
+            className="flex flex-row justify-around items-center h-screen"
+          >
+            <img
+              src="https://www.mundodeportivo.com/alfabeta/hero/2023/05/hollow-knight.1683709273.8012.jpg?width=768&aspect_ratio=16:9&format=nowebp"
+              alt="hola"
+              className="h-screen w-1/2 object-cover"
             />
-            <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} marginTop={4}>
-                <Box
-                    style={{
-                        my: 8,
-                        mx: 4,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                    }}
+            <div
+              className="flex flex-col items-center w-1/2"
+            >
+              <form
+                className={'my-10 bg-white rounded-lg px-36 py-8 w-full'}
+                onSubmit={handleSubmit}
+              >
+                <h1
+                  className={'text-3xl font-bold text-center mb-6 uppercase'}
                 >
-                    <Avatar style={{ m: 1, bgcolor: 'secondary.main' }}>
-                        <LockOutlinedIcon />
-                    </Avatar>
-                    <Typography component="h1" variant="h5">
-                        Sign in
-                    </Typography>
-                    <Box
-                        component="form"
-                        noValidate
-                        onSubmit={handleSubmit}
-                        style={{ mt: 1 }}
-                    >
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="email"
-                            label="Email Address"
-                            name="email"
-                            autoComplete="email"
-                            autoFocus
-                        />
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            name="password"
-                            label="Password"
-                            type="password"
-                            id="password"
-                            autoComplete="current-password"
-                        />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
-                        />
-                        <Button
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            style={{ mt: 3, mb: 2, bgcolor: 'secondary.main' }}
-                        >
-                            Sign In
-                        </Button>
-                    </Box>
-                </Box>
-            </Grid>
-        </Grid>
+                  Iniciar Sesion
+                </h1>
+                <div className={'my-12'}>
+                  <label className={'uppercase text-gray-600 block text-xl font-bold'} htmlFor={'email'}>Email</label>
+                  <input
+                    type={'email'}
+                    placeholder={'Escribe tu email'}
+                    className={'w-full mt-3 p-3 border rounded-lg bg-gray-100'}
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className={'mt-12 mb-6'}>
+                  <label className={'uppercase text-gray-600 block text-xl font-bold'} htmlFor={'password'}>Password</label>
+                  <input
+                    type={'password'}
+                    placeholder={'Escribe la contrasena'}
+                    className={'w-full mt-3 p-3 border rounded-lg bg-gray-100'}
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
+                  />
+                </div>
+                <a
+                  href={'/forgot-password'}
+                  className="text-sky-600 hover:text-sky-500 transition-colors"
+                >Haz olvidado tu <span>Contrasena?</span></a>
+
+                <input
+                  type={'submit'}
+                  value={'Iniciar Sesion'}
+                  className={'bg-sky-700 w-full py-3 mb-5 mt-4 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-sky-800 transition-colors'}
+                />
+              </form>
+            </div>
+          </div>
+        </>
     );
 }
 
