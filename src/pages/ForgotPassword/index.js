@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import Error from '../../components/Error';
 
 const ForgotPassword = () => {
 
@@ -27,11 +28,13 @@ const ForgotPassword = () => {
 
 		} catch (error) {
 			setAlerta({
-				msg: error.response.data.msg,
+				msg: "Correo no encontrado",
 				error: true
 			})
 		}
 	}
+
+	const { msg } = alerta
 
 	return (
 		<>
@@ -55,6 +58,9 @@ const ForgotPassword = () => {
 						>
 							Recupera Tu Contrasena
 						</h1>
+
+						{ msg && <Error alerta={alerta} /> }
+
 						<h2
 							className={'text-xl font-bold text-center mb-6 uppercase'}
 						>

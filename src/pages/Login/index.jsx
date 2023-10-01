@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Error from '../../components/Error';
 import axios from 'axios';
 
 const Login = () => {
@@ -6,6 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState({})
+
   const handleSubmit = async e => {
     e.preventDefault();
 
@@ -26,12 +28,14 @@ const Login = () => {
       // navigate('/proyectos')
     } catch (e) {
       setError({
-        msg: e.response.data.msg,
+        msg: "El usuario no existe",
         error: true
       })
     }
 
   }
+
+  const { msg } = error
 
   return (
     <>
@@ -55,6 +59,9 @@ const Login = () => {
             >
               Iniciar Sesion
             </h1>
+
+            {msg && <Error alerta={error}/>}
+
             <div className={'my-12'}>
               <label className={'uppercase text-gray-600 block text-xl font-bold'} htmlFor={'email'}>Email</label>
               <input

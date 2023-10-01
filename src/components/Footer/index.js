@@ -1,98 +1,66 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import {List, ListItem, ListItemText} from '@mui/material';
+import {Container} from '@mui/material';
 
 const Footer = () => {
-    
     return (
-      <>
-          <AppBar position="static" sx={{ backgroundColor: 'black' }}>
-              <Toolbar>
-                  <div className= "justify-between flex flex-row my-10 bg-blue-50">
-                      <Typography variant="body1" color="inherit" sx={{ flexGrow: 1 }}>
-                          © 2023 HPC. Todos los derechos reservados.
-                      </Typography>
-                      <div className= "justify-between flex flex-row my-10 bg-blue-50">
-                          <div className= "justify-center flex my-10">
-                              <List dense sx={{ display: 'flex', flexDirection: 'column'}}>
-                                  <ListItem>
+      <footer className="py-8 bg-gray-800">
+        <Container
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+          }}
+        >
+          <div
+            className="flex flex-col"
+          >
+            <h1
+              className="text-4xl font-bold text-white"
+            >
+              HPC
+            </h1>
+            <h2
+              className="text-2xl font-bold text-white"
+            >
+              Cambiar por una imagen de la UOH o de lo que sea
+            </h2>
+          </div>
 
-                                      <ListItemText primary="Nosotros"
-                                                    primaryTypographyProps={{ color: '#61dafb' }} />
-
-                                  </ListItem>
-                                  <ListItem>
-                                      <ListItemText primary="Acerca de" />
-                                  </ListItem>
-                                  <ListItem>
-                                      <ListItemText primary="Equipo" />
-                                  </ListItem>
-                                  <ListItem>
-                                      <ListItemText primary="Publicaciones" />
-                                  </ListItem>
-                              </List>
-                          </div>
-                          <div className= "justify-center flex my-10">
-                              <List dense sx={{ display: 'flex', flexDirection: 'column'}}>
-                                  <ListItem>
-                                      <ListItemText primary="Más"
-                                                    primaryTypographyProps={{ color: '#61dafb' }} />
-
-                                  </ListItem>
-                                  <ListItem>
-                                      <ListItemText primary="Infraestructura" />
-                                  </ListItem>
-                                  <ListItem>
-                                      <ListItemText primary="Noticias" />
-                                  </ListItem>
-                                  <ListItem>
-                                      <ListItemText primary="Visitas" />
-                                  </ListItem>
-                              </List>
-                          </div>
-                          <div className= "justify-center flex my-10">
-                              <List dense sx={{ display: 'flex', flexDirection: 'column'}}>
-                                  <ListItem>
-                                      <ListItemText primary="Información"
-                                                    primaryTypographyProps={{ color: '#61dafb' }} />
-
-                                  </ListItem>
-                                  <ListItem>
-                                      <ListItemText primary="Contacto" />
-                                  </ListItem>
-                                  <ListItem>
-                                      <ListItemText primary="Soporte" />
-                                  </ListItem>
-
-                              </List>
-                          </div>
-                      </div></div>
-              </Toolbar>
-          </AppBar>
-          <AppBar position="static" color="primary">
-              <Toolbar>
-                  <Typography variant="body1" color="inherit" sx={{ flexGrow: 1 }}>
-                      © 2023 HPC. Todos los derechos reservados.
-                  </Typography>
-                  <IconButton color="inherit" aria-label="Facebook">
-                      <FacebookIcon />
-                  </IconButton>
-                  <IconButton color="inherit" aria-label="Twitter">
-                      <TwitterIcon />
-                  </IconButton>
-                  <IconButton color="inherit" aria-label="LinkedIn">
-                      <LinkedInIcon />
-                  </IconButton>
-              </Toolbar>
-          </AppBar>
-      </>
+          <div
+            className="flex flex-row justify-around w-1/2"
+          >
+            <ul className="list-unstyled text-white">
+              <li>
+                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT License</a>
+              </li>
+              <li>
+                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms & Conditions</a>
+              </li>
+              <li>
+                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+              </li>
+              <li>
+                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+              </li>
+            </ul>
+            <ul className="list-unstyled text-white">
+              <li>
+                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT License</a>
+              </li>
+              <li>
+                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/terms?ref=njs-profile">Terms & Conditions</a>
+              </li>
+              <li>
+                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+              </li>
+              <li>
+                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </Container>
+      </footer>
     );
-}
+};
 
 export default Footer;

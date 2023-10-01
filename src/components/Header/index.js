@@ -18,27 +18,24 @@ import LoginButton from "../LoginButton";
 
 const Header = () => {
     return (
-        <AppBar position="static" sx={{
-            backgroundColor: '#FFFFFF',
-        }}>
-            <Toolbar>
-                <Typography variant="h6" color="primary" sx={{ flexGrow: 1 }} >
-                    HPC
-                </Typography>
-                <Button
-                    color="primary"
-                    href={'/'}
-                >
-                    Inicio
-                </Button>
-                <Button color="primary">Acerca de</Button>
-                <Button color="primary">Servicios</Button>
-                <Button color="primary">Noticias</Button>
-                <Button color="primary">Contacto</Button>
-                <LoginButton />
+      <div className="bg-gray-800">
+          <Container>
+              <div className="mx-auto">
+                  <div className="flex items-center justify-between p-4">
+                      <h6 className="text-white text-lg font-bold items-center">HPC</h6>
+                      <nav className="flex space-x-10 items-center">
+                          <a href="/" className="text-white">Inicio</a>
+                          <a href="/" className="text-white">Acerca de</a>
+                          <a href="/" className="text-white">Servicios</a>
+                          <a href="/" className="text-white">Noticias</a>
+                          <a href="/" className="text-white">Contacto</a>
+                          <LoginButton />
+                      </nav>
+                  </div>
+              </div>
+          </Container>
+      </div>
 
-            </Toolbar>
-        </AppBar>
     );
 }
 

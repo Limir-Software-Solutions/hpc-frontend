@@ -1,5 +1,3 @@
-import './App.css';
-
 // Dependencies
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
