@@ -1,38 +1,45 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import Stack from '@mui/material/Stack';
+import { Container} from '@mui/material';
+import Cards from '../../components/Cards';
+import Carousel from '../../components/Carousel';
 
 export default function Home() {
+
+  const slides = [
+    "https://wallpapercave.com/wp/wp1904115.png",
+    "https://wallpapercave.com/wp/wp2498526.jpg",
+    "https://wallpapercave.com/wp/wp2703769.jpg",
+    "https://wallpapercave.com/wp/wp2262445.jpg",
+  ];
+
+
   return (
-    <div className= "justify-center items-center flex my-16">
-      
-      <Card sx={{ maxWidth: 800 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="/static/images/hpc.png"
-          alt="NoticiaHPC"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Towards a greater HPC capacity in Latin America
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          High-Performance Computing (HPC) has proven to be a strong driver for science and technology development,
-           and is increasingly considered indispensable for most scientific disciplines. HPC is making a difference
-            in key topics of great interest such as climate change, personalised medicine, engineering, astronomy, 
-            education, economics, industry and public policy, becoming a pillar for the development of any country, 
-            and to which the great powers are giving strategic importance and investing billions of dollars, in competition without limits where data is the new gold.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      </Card>
-   
-      </div>
+    <>
+      <Carousel slides={slides}/>
+      <Container>
+        <div className="justify-between items-center flex my-16 flex-col sm:flex-row">
+          <Cards
+            imagen="/static/images/Logouoh.png"
+            titulo="Nosotros"
+            texto="El HPC de la UOH proporciona experiencia, capacidad de cómputo, servicios y capacitación para permitir la investigación intensiva en computación y ciencia de datos."
+          />
+          <Cards
+            imagen="/static/images/Logouoh.png"
+            titulo="Servicios"
+            texto="Nuestros servicios están diseñados para ofrecer soporte e innovación basada en supercómputo (HPC)."
+          />
+          <Cards
+            imagen="/static/images/Logouoh.png"
+            titulo="Infraestructura"
+            texto="El supercomputador más poderoso de Chile está disponible para los investigadores de todo el país."
+          />
+        </div>
+
+        {/* TODO: se debe hacer lo de los eventos*/}
+        <div>
+
+        </div>
+      </Container>
+    </>
   );
 }
