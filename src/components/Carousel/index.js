@@ -1,58 +1,50 @@
-import { useState } from "react";
-import {
-  BsFillArrowRightCircleFill,
-  BsFillArrowLeftCircleFill,
-} from "react-icons/bs";
+import React, { useState } from 'react';
 
-export default function Carousel({ slides }) {
-  let [current, setCurrent] = useState(0);
+const Carousel = ({slides}) => {
+    const [currentSlide, setCurrentSlide] = useState(0);
 
-  let previousSlide = () => {
-    if (current === 0) setCurrent(slides.length - 1);
-    else setCurrent(current - 1);
-  };
+    const nextSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    };
 
-  let nextSlide = () => {
-    if (current === slides.length - 1) setCurrent(0);
-    else setCurrent(current + 1);
-  };
+    const prevSlide = () => {
+        setCurrentSlide((prevSlide) =>
+            prevSlide === 0 ? slides.length - 1 : prevSlide - 1
+        );
+    };
 
-  return (
-    <div className="overflow-hidden relative">
-      <div
-        className={`flex transition ease-out duration-40`}
-      >
-        {slides.map((s) => {
-          return <img
-            src={s}
-          />;
-        })}
-      </div>
+    return (
+        <div className="relative w-full h-screen mx-auto">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+                <div className="flex transition-transform duration-500 ease-in-out transform translate-x-full"
+                     style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                    {slides.map((slide, index) => (
+                        <div key={index} className="w-full flex-shrink-0">
+                            <img
+                                src={slide}
+                                alt={`Slide ${index + 1}`}
+                                className="w-full object-cover h-screen"
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
 
-      <div className="absolute top-0 h-full w-full justify-between items-center flex text-white px-10 text-3xl">
-        <button onClick={previousSlide}>
-          <BsFillArrowLeftCircleFill />
-        </button>
-        <button onClick={nextSlide}>
-          <BsFillArrowRightCircleFill />
-        </button>
-      </div>
+            <button
+                className="absolute top-1/2 left-0 text-white text-2xl font-bold bg-gray-800 px-4 py-2 rounded-full transform -translate-y-1/2 hover:bg-gray-600 focus:outline-none"
+                onClick={prevSlide}
+            >
+                {'<'}
+            </button>
 
-      <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
-        {slides.map((s, i) => {
-          return (
-            <div
-              onClick={() => {
-                setCurrent(i);
-              }}
-              key={"circle" + i}
-              className={`rounded-full w-5 h-5 cursor-pointer  ${
-                i == current ? "bg-white" : "bg-gray-500"
-              }`}
-            ></div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
+            <button
+                className="absolute top-1/2 right-0 text-white text-2xl font-bold bg-gray-800 px-4 py-2 rounded-full transform -translate-y-1/2 hover:bg-gray-600 focus:outline-none"
+                onClick={nextSlide}
+            >
+                {'>'}
+            </button>
+        </div>
+    );
+};
+
+export default Carousel;

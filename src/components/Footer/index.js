@@ -3,7 +3,7 @@ import {Container} from '@mui/material';
 
 const Footer = () => {
     return (
-      <footer className="py-8 bg-gray-800">
+      <footer className="py-8 bg-black">
         <Container
           sx={{
             display: 'flex',

@@ -1,42 +1,110 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
-    AppBar,
-    Toolbar,
-    ButtonGroup,
+    Container,
     IconButton,
     Drawer,
     List,
     ListItem,
     ListItemText,
-    Container,
-    Typography,
-    Box,
-    Button,
-    Link,
+    Hidden,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import LoginButton from "../LoginButton";
 
 const Header = () => {
-    return (
-      <div className="bg-gray-800">
-          <Container>
-              <div className="mx-auto">
-                  <div className="flex items-center justify-between p-4">
-                      <h6 className="text-white text-lg font-bold items-center">HPC</h6>
-                      <nav className="flex space-x-10 items-center">
-                          <a href="/" className="text-white">Inicio</a>
-                          <a href="/" className="text-white">Acerca de</a>
-                          <a href="/" className="text-white">Servicios</a>
-                          <a href="/" className="text-white">Noticias</a>
-                          <a href="/" className="text-white">Contacto</a>
-                          <LoginButton />
-                      </nav>
-                  </div>
-              </div>
-          </Container>
-      </div>
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const pathname = window.location.pathname;
 
+    const handleDrawerOpen = () => {
+        setIsDrawerOpen(true);
+    };
+
+    const handleDrawerClose = () => {
+        setIsDrawerOpen(false);
+    };
+
+    return (
+        <div className="bg-white">
+            <Container>
+                <div className="mx-auto">
+                    <div className="flex items-center justify-between p-4">
+                        <h6 className="text-black text-lg font-bold items-center">HPC</h6>
+                        <Hidden mdDown>
+                            <nav className="hidden md:flex space-x-10 items-center text-black">
+                                <a href="/" className="hover:text-gray-500"
+                                   style={{
+                                    color: pathname === '/' ? '#2563EB' : 'black'
+                                    }}
+                                >Inicio</a>
+                                <a href="/" className="hover:text-gray-500"
+                                   style={{
+                                    color: pathname === '/acerca' ? '#2563EB' : 'black'
+                                }}>Acerca de</a>
+                                <a href="/" className="hover:text-gray-500"
+                                   style={{
+                                       color: pathname === '/servicios' ? '#2563EB' : 'black'
+                                }}>Servicios</a>
+                                <a href="/" className="hover:text-gray-500"
+                                   style={{
+                                       color: pathname === '/noticias' ? '#2563EB' : 'black'
+                                }}>Noticias</a>
+                                <a href="/" className="hover:text-gray-500"
+                                   style={{
+                                       color: pathname === '/contacto' ? '#2563EB' : 'black'
+                                }}>Contacto</a>
+                                <LoginButton />
+                            </nav>
+                        </Hidden>
+                        <Hidden mdUp>
+                            <IconButton
+                                edge="end"
+                                color="inherit"
+                                aria-label="menu"
+                                onClick={handleDrawerOpen}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                        </Hidden>
+                    </div>
+                </div>
+            </Container>
+            <Drawer
+                anchor="right"
+                open={isDrawerOpen}
+                onClose={handleDrawerClose}
+                ModalProps={{
+                    keepMounted: true,
+                }}
+            >
+                <div
+                    role="presentation"
+                    onClick={handleDrawerClose}
+                    onKeyDown={handleDrawerClose}
+                >
+                    <List>
+                        <ListItem button>
+                            <ListItemText primary="Inicio" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="Acerca de" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="Servicios" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="Noticias" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="Contacto" />
+                        </ListItem>
+                        <ListItem button>
+                            <LoginButton />
+                        </ListItem>
+                    </List>
+                </div>
+            </Drawer>
+        </div>
     );
-}
+};
 
 export default Header;

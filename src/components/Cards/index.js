@@ -8,11 +8,29 @@ import { CardActionArea } from '@mui/material';
 
 function Cards({ imagen, titulo, texto }) {
 	return (
-		<Card sx={{ maxWidth: 345 }}>
+		<Card
+			sx={{
+				flexBasis: '30%',
+				maxWidth: 345,
+				height: 450,
+				borderRadius: 10,
+				boxShadow: 3,
+				marginY: 2,
+				'@media (max-width: 600px)': {
+					flexDirection: 'column',
+				},
+			}}
+		>
 			<CardActionArea>
 				<CardMedia
 					component="img"
-					height="140"
+					sx={{
+						maxWidth: '100%',
+						maxHeight: '270px',
+						'@media (max-width: 650px)': {
+							maxHeight: '350px',
+						}
+					}}
 					image={imagen}
 					alt={titulo}
 				/>

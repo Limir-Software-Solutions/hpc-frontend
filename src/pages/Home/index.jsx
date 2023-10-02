@@ -6,19 +6,18 @@ import Carousel from '../../components/Carousel';
 export default function Home() {
 
   const slides = [
-    "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-    "https://wallpapercave.com/wp/wp3386769.jpg",
-    "https://wallpaperaccess.com/full/809523.jpg",
-    "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
+    "https://wallpapercave.com/wp/wp1904115.png",
+    "https://wallpapercave.com/wp/wp2498526.jpg",
+    "https://wallpapercave.com/wp/wp2703769.jpg",
+    "https://wallpapercave.com/wp/wp2262445.jpg",
   ];
+
 
   return (
     <>
       <Carousel slides={slides}/>
       <Container>
-        {/* TODO: se debe hacer el carrusel*/}
-
-        <div className="justify-between items-center flex my-16">
+        <div className="justify-between items-center flex my-16 flex-col sm:flex-row">
           <Cards
             imagen="/static/images/Logouoh.png"
             titulo="Nosotros"
