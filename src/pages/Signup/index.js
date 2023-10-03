@@ -56,7 +56,7 @@ const Signup = () => {
                         onSubmit={handleSubmit}
                     >
                         <h1 className={'text-3xl font-bold text-center mb-6 uppercase'}>
-                            Iniciar Sesion
+                            Crear Cuenta
                         </h1>
 
                         {msg && <Error alerta={error} />}

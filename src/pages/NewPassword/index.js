@@ -70,7 +70,7 @@ const NewPassword = () => {
                                 Contrasena
                             </label>
                             <input
-                                type={'text'}
+                                type={'password'}
                                 placeholder={'Escribe tu contrasena'}
                                 className={'w-full mt-3 p-3 border rounded-lg bg-gray-100'}
                                 value={password}
@@ -85,7 +85,7 @@ const NewPassword = () => {
                                 repite Contrasena
                             </label>
                             <input
-                                type={'text'}
+                                type={'password'}
                                 placeholder={'Escribe tu contrasena'}
                                 className={'w-full mt-3 p-3 border rounded-lg bg-gray-100'}
                                 value={newPassword}
