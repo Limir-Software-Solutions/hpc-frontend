@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { Container} from '@mui/material';
 import Cards from '../../components/Cards';
-import Carousel from '../../components/carousel/index';
+import Carousel from '../../components/Carousel/index.js';
 
 export default function Home() {
 
   const slides = [
-    "https://wallpapercave.com/wp/wp1904115.png",
-    "https://wallpapercave.com/wp/wp2498526.jpg",
-    "https://wallpapercave.com/wp/wp2703769.jpg",
-    "https://wallpapercave.com/wp/wp2262445.jpg",
+    "static/images/campus_aereo.jpg",
+    "static/images/UOH.jpg",
+    "static/images/frontis_uoh.jpg",
+    "static/images/uoh_hall.jpeg",
   ];
 
 
@@ -19,19 +19,19 @@ export default function Home() {
       <Container>
         <div className="justify-between items-center flex my-16 flex-col sm:flex-row">
           <Cards
-            imagen="/static/images/Logouoh.png"
+            imagen="/static/images/nosotros.webp"
             titulo="Nosotros"
-            texto="El HPC de la UOH proporciona experiencia, capacidad de cómputo, servicios y capacitación para permitir la investigación intensiva en computación y ciencia de datos."
+            texto="Conoce al equipo de investigación detrás de todos los avances, proyectos y publicaciones que han sido posibles gracias al uso de nuestro HPC."
           />
           <Cards
-            imagen="/static/images/Logouoh.png"
-            titulo="Servicios"
-            texto="Nuestros servicios están diseñados para ofrecer soporte e innovación basada en supercómputo (HPC)."
+            imagen="/static/images/noti.png"
+            titulo="Noticias"
+            texto="Las últimas noticias con relación a nuestro HPC que van desde las recientes investigaciones del equipo hasta noticias internacionales afines a los intereses del laboratorio."
           />
           <Cards
-            imagen="/static/images/Logouoh.png"
+            imagen="/static/images/hpc.png"
             titulo="Infraestructura"
-            texto="El supercomputador más poderoso de Chile está disponible para los investigadores de todo el país."
+            texto="El supercomputador más poderoso de la Sexta Región está disponible para los investigadores de todo el país."
           />
         </div>
 
