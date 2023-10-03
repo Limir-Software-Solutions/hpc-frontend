@@ -21,16 +21,18 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-          `${import.meta.env.VITE_BACKEND_URL}/api/usuarios/login`,
+          `http://localhost:8081/users/login`,
           { email, password }
       );
       setError({});
+
       localStorage.setItem('token', data.token);
+      console.log(data)
       // setAuth(data);
       // navigate('/proyectos')
     } catch (e) {
       setError({
-        msg: 'El usuario no existe',
+        msg: e.response.data.message,
         error: true,
       });
     }
