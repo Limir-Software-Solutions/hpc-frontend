@@ -54,7 +54,7 @@ const Login = () => {
                 onSubmit={handleSubmit}
             >
               <h1 className={'text-3xl font-bold text-center mb-6 uppercase'}>
-                Iniciar Sesion
+                Iniciar Sesión
               </h1>
 
               {msg && <Error alerta={error} />}
