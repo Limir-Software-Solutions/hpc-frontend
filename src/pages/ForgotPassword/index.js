@@ -44,7 +44,7 @@ const ForgotPassword = () => {
 				<Hidden smDown>
 					{/* La imagen solo se mostrará en pantallas mayores o iguales a `md` */}
 					<img
-						src="https://www.mundodeportivo.com/alfabeta/hero/2023/05/hollow-knight.1683709273.8012.jpg?width=768&aspect_ratio=16:9&format=nowebp"
+						src="static/images/login.jpg"
 						alt="hola"
 						className="h-screen w-full md:w-1/2 object-cover"
 					/>
@@ -55,20 +55,20 @@ const ForgotPassword = () => {
 						onSubmit={handleSubmit}
 					>
 						<h1 className={'text-3xl font-bold text-center mb-2 uppercase'}>
-							Recupera Tu Contrasena
+							Recupera Tu Contraseña
 						</h1>
 
 						{msg && <Error alerta={alerta} />}
 
 						<h2 className={'text-xl font-bold text-center mb-6 uppercase'}>
-							Ingresando tu Email
+							Ingresando tu Correo
 						</h2>
 						<div className={'my-4'}>
 							<label
 								className={'uppercase text-gray-600 block text-xl font-bold'}
 								htmlFor={'email'}
 							>
-								Email
+								Correo
 							</label>
 							<input
 								type={'email'}
@@ -82,7 +82,7 @@ const ForgotPassword = () => {
 							href={'/login'}
 							className="text-sky-600 hover:text-sky-500 transition-colors"
 						>
-							Tienes cuenta? Inicia sesion
+							Tienes cuenta? Inicia Sesión
 						</a>
 
 						<input

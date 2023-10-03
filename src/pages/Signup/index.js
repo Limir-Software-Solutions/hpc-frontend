@@ -81,7 +81,7 @@ const Signup = () => {
                                 className={'uppercase text-gray-600 block text-xl font-bold'}
                                 htmlFor={'email'}
                             >
-                                Email
+                                Correo
                             </label>
                             <input
                                 type={'email'}
@@ -96,11 +96,11 @@ const Signup = () => {
                                 className={'uppercase text-gray-600 block text-xl font-bold'}
                                 htmlFor={'password'}
                             >
-                                Password
+                                Contraseña
                             </label>
                             <input
                                 type={'password'}
-                                placeholder={'Escribe la contrasena'}
+                                placeholder={'Escribe la contraseña'}
                                 className={'w-full mt-3 p-3 border rounded-lg bg-gray-100'}
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
@@ -111,7 +111,7 @@ const Signup = () => {
                                 className={'uppercase text-gray-600 block text-xl font-bold'}
                                 htmlFor={'repeatPassword'}
                             >
-                                Repite la Password
+                                Repite la Contraseña
                             </label>
                             <input
                                 type={'password'}
@@ -125,7 +125,7 @@ const Signup = () => {
                             href={'/forgot-password'}
                             className="text-sky-600 hover:text-sky-500 transition-colors"
                         >
-                            Haz olvidado tu <span>Contrasena?</span>
+                            Haz olvidado tu <span>Contraseña?</span>
                         </a>
 
                         <input

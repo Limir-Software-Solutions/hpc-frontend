@@ -32,7 +32,7 @@ const ConfirmarCuenta = () => {
             }
         }
         confirmarCuenta();
-    }, [])
+    }, )
 
     const { msg } = alerta
 
