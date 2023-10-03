@@ -38,30 +38,10 @@ const Login = () => {
 
   const { msg } = error;
 
-    return (
-<<<<<<<<< Temporary merge branch 1
-        <Grid container component="main" style={{ height: '100vh' }}>
-            <CssBaseline />
-            <Grid
-                item
-                xs={false}
-                sm={4}
-                md={7}
-                style={{
-                    backgroundImage: 'url(https://images.adsttc.com/media/images/61f3/16c3/c675/1930/e90d/9058/slideshow/1-aerea-ok.jpg?1643321063)',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundColor: (t) =>
-                        t.palette.mode === 'light'
-                            ? t.palette.grey[50]
-                            : t.palette.grey[900],
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                }}
-=========
-        <>
-          <div
-            className="flex flex-row justify-around items-center h-screen"
-          >
+  return (
+      <>
+        <div className="flex flex-col md:flex-row h-screen">
+          <Hidden smDown>
             <img
                 src="static/images/login.jpg"
                 alt="hola"
