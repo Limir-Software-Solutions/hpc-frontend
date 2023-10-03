@@ -28,14 +28,11 @@ const Header = () => {
             <Container>
                 <div className="mx-auto">
                     <div className="flex items-center justify-between p-4">
-                        <h6 className="text-black text-lg font-bold items-center">HPC</h6>
+                        <a href="/"> 
+                                <img style={{maxWidth:"60px"}}src="static/images/Logouoh.png"/>
+                                </a>
                         <Hidden mdDown>
                             <nav className="hidden md:flex space-x-10 items-center text-black">
-                                <a href="/" className="hover:text-gray-500"
-                                   style={{
-                                    color: pathname === '/' ? '#2563EB' : 'black'
-                                    }}
-                                >Inicio</a>
                                 <a href="/" className="hover:text-gray-500"
                                    style={{
                                     color: pathname === '/acerca' ? '#2563EB' : 'black'
@@ -48,6 +45,10 @@ const Header = () => {
                                    style={{
                                        color: pathname === '/noticias' ? '#2563EB' : 'black'
                                 }}>Noticias</a>
+                                <a href="/" className="hover:text-gray-500"
+                                   style={{
+                                       color: pathname === '/publicaciones' ? '#2563EB' : 'black'
+                                }}>Publicaciones</a>
                                 <a href="/" className="hover:text-gray-500"
                                    style={{
                                        color: pathname === '/contacto' ? '#2563EB' : 'black'
@@ -96,6 +97,9 @@ const Header = () => {
                         </ListItem>
                         <ListItem button>
                             <ListItemText primary="Contacto" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemText primary="Publicaciones" />
                         </ListItem>
                         <ListItem button>
                             <LoginButton />
