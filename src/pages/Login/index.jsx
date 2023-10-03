@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import Error from '../../components/Error';
 import axios from 'axios';
 import { Hidden } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [auth, setAuth] = useState({});
   const [error, setError] = useState({});
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,13 +24,15 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-          `${import.meta.env.VITE_BACKEND_URL}/api/usuarios/login`,
+          `http://localhost:8081/users/login`,
           { email, password }
       );
       setError({});
-      localStorage.setItem('token', data.token);
-      // setAuth(data);
-      // navigate('/proyectos')
+
+      localStorage.setItem('token', data.authToken);
+      setAuth(data);
+      navigate('/')
+      window.location.reload()
     } catch (e) {
       setError({
         msg: 'El usuario no existe',

@@ -37,21 +37,22 @@ const ConfirmarCuenta = () => {
     const { msg } = alerta
 
     return (
-        <>
-            <h1 className="text-sky-600 font-black text-5xl capitalize text-center mt-16">Confirma tu cuenta
-            </h1>
+        <div
+            className="flex flex-col h-screen items-center justify-center"
+        >
+            <h1 className="text-sky-600 font-black text-5xl capitalize text-center">Confirma tu cuenta</h1>
 
-            <div className='mt-20 md:mt-10 shadow-lg px-5 py-2 rounded-xl bg-white'>
+            <div className='mt-20 md:mt-10 px-5 rounded-xl'>
                 {msg && <Error alerta={alerta} />}
 
                 {cuentaConfirmada && (
                     <Link
-                        className='block text-center mt-16 mb-10 text-white uppercase text-sm rounded bg-sky-600 rounded-3xl w-56 m-auto p-2 font-bold'
-                        to="/"
-                    >Inicia Sesión</Link>
+                        className='block text-center mt-4 mb-10 text-white uppercase text-sm rounded bg-sky-600 rounded-3xl w-56 m-auto p-2 font-bold'
+                        to="/login"
+                    >Confirmar Cuenta</Link>
                 )}
             </div>
-        </>
+        </div>
     )
 }
 

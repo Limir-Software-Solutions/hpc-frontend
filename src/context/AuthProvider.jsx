@@ -9,8 +9,6 @@ const AuthProvider = ({children}) => {
     const [auth, setAuth] = useState({});
     const [cargando, setCargando] = useState(true);
 
-    console.log("auth", auth)
-
     useEffect(() => {
         const autenticarUsuario = async () => {
             const token = localStorage.getItem('token')

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Carousel = ({slides}) => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,6 +12,17 @@ const Carousel = ({slides}) => {
             prevSlide === 0 ? slides.length - 1 : prevSlide - 1
         );
     };
+
+    const autoChangeSlide = () => {
+        nextSlide();
+    };
+
+    useEffect(() => {
+        const intervalId = setInterval(autoChangeSlide, 3000);
+
+        return () => clearInterval(intervalId);
+    }, [currentSlide]);
+
 
     return (
         <div className="relative w-full h-screen mx-auto">

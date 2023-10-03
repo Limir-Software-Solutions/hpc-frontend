@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {
     Container,
     IconButton,
@@ -10,9 +10,14 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import LoginButton from "../LoginButton";
+import useAuth from "../../hooks/useAuth";
+import AuthAvatar from "../AuthAvatar";
 
 const Header = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const auth = useAuth();
+
+    console.log(auth.auth)
     const pathname = window.location.pathname;
 
     const handleDrawerOpen = () => {
@@ -53,7 +58,7 @@ const Header = () => {
                                    style={{
                                        color: pathname === '/contacto' ? '#2563EB' : 'black'
                                 }}>Contacto</a>
-                                <LoginButton />
+                                {auth.auth.name ? <AuthAvatar /> : <LoginButton />}
                             </nav>
                         </Hidden>
                         <Hidden mdUp>
@@ -83,8 +88,13 @@ const Header = () => {
                     onKeyDown={handleDrawerClose}
                 >
                     <List>
-                        <ListItem button>
-                            <ListItemText primary="Inicio" />
+                        <ListItem
+                            sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                            }}
+                        >
+                            {auth.auth.name ? <AuthAvatar /> : <LoginButton />}
                         </ListItem>
                         <ListItem button>
                             <ListItemText primary="Acerca de" />
@@ -100,9 +110,6 @@ const Header = () => {
                         </ListItem>
                         <ListItem button>
                             <ListItemText primary="Publicaciones" />
-                        </ListItem>
-                        <ListItem button>
-                            <LoginButton />
                         </ListItem>
                     </List>
                 </div>

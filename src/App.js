@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
 import Signup from "./pages/Signup";
 import ConfirmAccount from "./pages/ConfirmAccount";
+import NewPassword from "./pages/NewPassword";
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "confirmar-cuenta/:id",
     element: <ConfirmAccount />,
+  },
+  {
+    path: "nueva-contrasena/:token",
+    element: <NewPassword />,
   },
 ]);
 
