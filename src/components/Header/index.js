@@ -29,7 +29,7 @@ const Header = () => {
                 <div className="mx-auto">
                     <div className="flex items-center justify-between p-4">
                         <a href="/"> 
-                                <img style={{maxWidth:"60px"}}src="static/images/Logouoh.png"/>
+                                <img style={{maxWidth:"60px"}} src="static/images/Logouoh.png" alt="prueba"/>
                                 </a>
                         <Hidden mdDown>
                             <nav className="hidden md:flex space-x-10 items-center text-black">

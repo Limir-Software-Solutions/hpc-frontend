@@ -22,7 +22,7 @@ const Footer = () => {
             <h2
               className="text-2xl font-bold text-white"
             >
-              <img style={{maxWidth:"190px"}}src="static/images/logo3.png"/>
+              <img style={{maxWidth:"190px"}} src="static/images/logo3.png" alt="prueba"/>
             </h2>
           </div>
 
