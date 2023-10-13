@@ -22,6 +22,23 @@ const Contact = () => {
           });
           return;
         }
+        if (name.includes('@')) {
+            setError({
+                msg: 'Tu nombre ta malo',
+                error: true,
+            });
+            return;
+        }
+        if (message.length < 10) {
+            setError({
+                msg: 'El largo del mensaje debe ser mayor a 10 caracteres',
+                error: true,
+            });
+            return;
+        }
+
+
+
         console.log("god")
         /*try {
           const { data } = await axios.post(
@@ -42,7 +59,7 @@ const Contact = () => {
         } */
       };
       const { msg } = error;
-
+        setTimeout(() => {setError({})}, 3500);
       return (
         <>
         <div className="py-20 bg-sky-700" style={{ position: "relative" }}>
@@ -51,7 +68,7 @@ const Contact = () => {
             </h1>
         </div>
         <Container>
-        <div className="flex flex-row -mb-96 justify-between mt-40 h-screen">
+        <div className="flex flex-row -mb-96 justify-between mt-28 h-screen">
             <div className="flex flex-col w-full mx-auto">
                 <h1 className="text-2xl font-normal text-left my-2 ">
                 No dude en contactarnos si tiene alguna consulta o propuesta respecto a los servicios o actividades del NLHPC.
@@ -66,21 +83,28 @@ const Contact = () => {
                         <p className=" font-bold text-left my-2 uppercase ">
                             Oficina</p>
                         <p>Universidad de O'Higgins </p>
-                        <p>Av. Libertador Bernardo O'Higgins </p>
+                        <p>Av. Libertador Bernardo O'Higgins, </p>
+                        <p>Rancagua </p>
                         
                     </div>
                 </div>
             </div>
 
-            <div className="flex flex-col w-full ">
+            <div className="flex flex-col items-center w-full">
+
                 <h1 className="text-2xl font-normal px-6 text-left my-2 ">
+
                     A continuación, rellena los campos para ponerte en contacto con nosotros:
+
                 </h1>
+
             <form
+
                 className={' bg-white rounded-lg px-6 w-full md:w-10/12 '}
                 onSubmit={handleSubmit}>
                 <div className="flex justify-around flex-row ">
                     <div className="flex flex-col  ">
+
                         <input
                             type={'text'}
                             placeholder={'Nombre'}
@@ -112,6 +136,7 @@ const Contact = () => {
                         />
                         
             </form>
+                {msg && <Error alerta={error} />}
         </div>
         </div>
     </Container>
