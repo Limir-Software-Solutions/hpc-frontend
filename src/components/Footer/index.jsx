@@ -45,7 +45,7 @@ const Footer = () => {
                 <a className="font-semibold block pb-2 text-sm" href="/">Noticias</a>
               </li>
               <li>
-                <a className="font-semibold block pb-2 text-sm" href="/">Contacto</a>
+                <a className="font-semibold block pb-2 text-sm" href="/Contact">Contacto</a>
               </li>
             </ul>
           </div>

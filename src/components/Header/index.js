@@ -54,7 +54,7 @@ const Header = () => {
                                    style={{
                                        color: pathname === '/publicaciones' ? '#2563EB' : 'black'
                                 }}>Publicaciones</a>
-                                <a href="/" className="hover:text-gray-500"
+                                <a href="/Contact" className="hover:text-gray-500"
                                    style={{
                                        color: pathname === '/contacto' ? '#2563EB' : 'black'
                                 }}>Contacto</a>
