@@ -8,6 +8,8 @@ import ForgotPassword from './pages/ForgotPassword';
 import Signup from "./pages/Signup";
 import ConfirmAccount from "./pages/ConfirmAccount";
 import NewPassword from "./pages/NewPassword";
+import Contact from "./pages/Contact";
+
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -37,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "nueva-contrasena/:token",
     element: <NewPassword />,
+  },
+  {
+    path: "Contact",
+    element: <Contact />,
   },
 ]);
 
