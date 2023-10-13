@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hpc-frotend/static/css/main.3cf07a6d.css",
+    "main.js": "/hpc-frotend/static/js/main.135a923a.js",
+    "static/js/787.e8fa9fae.chunk.js": "/hpc-frotend/static/js/787.e8fa9fae.chunk.js",
+    "index.html": "/hpc-frotend/index.html",
+    "main.3cf07a6d.css.map": "/hpc-frotend/static/css/main.3cf07a6d.css.map",
+    "main.135a923a.js.map": "/hpc-frotend/static/js/main.135a923a.js.map",
+    "787.e8fa9fae.chunk.js.map": "/hpc-frotend/static/js/787.e8fa9fae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3cf07a6d.css",
+    "static/js/main.135a923a.js"
+  ]
+}
