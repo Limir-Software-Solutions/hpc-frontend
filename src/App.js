@@ -8,7 +8,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import Signup from "./pages/Signup";
 import ConfirmAccount from "./pages/ConfirmAccount";
 import NewPassword from "./pages/NewPassword";
-
+import Infraestructura from "./pages/Infraestructura";
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { AuthProvider } from "./context/AuthProvider";
@@ -37,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "nueva-contrasena/:token",
     element: <NewPassword />,
+  },
+  {
+    path: "infraestructura",
+    element: <Infraestructura/>,
   },
 ]);
 
