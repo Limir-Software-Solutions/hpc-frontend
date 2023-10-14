@@ -73,7 +73,7 @@ const Login = () => {
                 </label>
                 <input
                     type={'email'}
-                    placeholder={'Escribe tu email'}
+                    placeholder={'Escribe tu email*'}
                     className={'w-full mt-3 p-3 border rounded-lg bg-gray-100'}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -88,7 +88,7 @@ const Login = () => {
                 </label>
                 <input
                     type={'password'}
-                    placeholder={'Escribe la contraseña'}
+                    placeholder={'Escribe la contraseña*'}
                     className={'w-full mt-3 p-3 border rounded-lg bg-gray-100'}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -99,7 +99,8 @@ const Login = () => {
                   className="text-sky-600 hover:text-sky-500 transition-colors"
               >
                 Haz olvidado tu <span>Contraseña?</span>
-              </a>
+              </a> Los campos con * son obligatorios.
+
 
               <input
                   type={'submit'}

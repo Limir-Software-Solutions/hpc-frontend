@@ -39,7 +39,7 @@ const Footer = () => {
                 <a className="text-blue-500 font-semibold block pb-2 text-sm" href="/">Más</a>
               </li>
               <li>
-                <a className="font-semibold block pb-2 text-sm" href="/">Infraestructura</a>
+                <a className="font-semibold block pb-2 text-sm" href="/Infraestructura">Infraestructura</a>
               </li>
               <li>
                 <a className="font-semibold block pb-2 text-sm" href="/">Noticias</a>
