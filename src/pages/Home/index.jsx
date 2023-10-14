@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Container} from '@mui/material';
 import Cards from '../../components/Cards';
-import Carousel from '../../components/carousel';
+import Carousel from '../../components/Carousel';
 
 export default function Home() {
 
