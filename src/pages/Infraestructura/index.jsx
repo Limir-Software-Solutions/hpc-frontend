@@ -23,11 +23,11 @@ export default function Infraestructura() {
       <Box my={3}>
         <Card variant="outlined" style={{ padding: '20px', marginBottom: '20px' }}>
           <Typography variant="h4" gutterBottom>IBM-idataPlex Cluster</Typography>
-          <ul>
-            <li>66 nodes</li>
-            <li>528 cores</li>
-            <li>3.1Tb RAM (48Gb/node)</li>
-            <li>Infiniband Conection (40Gb/s)</li>
+          <ul >
+            <li style={{display: 'flex',fontSize:"20px"}}><img src="static\images\nodesicon.png" alt="cluster icon" width="5%" style={{marginRight:"10px"}}/> 66 nodes</li>
+            <li style={{display: 'flex',fontSize:"20px"}}><img src="static\images\coresicon.png" alt="cores icon" width="5%" style={{marginRight:"10px"}}/> 528 cores</li>
+            <li style={{display: 'flex',fontSize:"20px"}}><img src="static\images\ramicon.png" alt="ram icon" width="5%" style={{marginRight:"10px"}}/> 3.1Tb RAM (48Gb/node)</li>
+            <li style={{display: 'flex',fontSize:"20px"}}><img src="static\images\iconshare.png" alt="share icon"width="5%" style={{marginRight:"10px"}}/> Infiniband Conection (40Gb/s)</li>
           </ul>
         </Card>
       </Box>
