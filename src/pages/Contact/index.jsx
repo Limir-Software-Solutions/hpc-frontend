@@ -24,7 +24,7 @@ const Contact = () => {
         }
         if (name.includes('@')) {
             setError({
-                msg: 'Tu nombre ta malo',
+                msg: 'Tu nombre no deberia incluir el caracter "@"',
                 error: true,
             });
             return;
@@ -59,7 +59,7 @@ const Contact = () => {
         } */
       };
       const { msg } = error;
-        setTimeout(() => {setError({})}, 3500);
+        setTimeout(() => {setError({})}, 5000);
       return (
         <>
         <div className="py-20 bg-sky-700" style={{ position: "relative" }}>

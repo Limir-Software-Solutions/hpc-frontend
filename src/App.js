@@ -21,26 +21,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
-  {
-      path: "login",
-      element: <Login />,
-  },
-  {
-    path: "forgot-password",
-    element: <ForgotPassword />,
-  },
-  {
-    path: "signup",
-    element: <Signup />,
-  },
-  {
-    path: "confirmar-cuenta/:id",
-    element: <ConfirmAccount />,
-  },
-  {
-    path: "nueva-contrasena/:token",
-    element: <NewPassword />,
-  },
+
   {
     path: "infraestructura",
     element: <Infraestructura/>,
