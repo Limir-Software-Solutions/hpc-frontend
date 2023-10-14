@@ -7,13 +7,18 @@ import {
     ListItem,
     ListItemText,
     Hidden,
+    Menu,
+    MenuItem,
+    MenuList
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import useAuth from "../../hooks/useAuth";
 import AuthAvatar from "../AuthAvatar";
 
+
 const Header = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const [anchorEl, setAnchorEl] = useState(null); // Estado para el anclaje del menú
     const auth = useAuth();
 
     console.log(auth.auth)
@@ -26,6 +31,14 @@ const Header = () => {
     const handleDrawerClose = () => {
         setIsDrawerOpen(false);
     };
+    const handleClick = async (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+    setTimeout(() => {handleClick({})}, 5000);
 
     return (
         <div className="bg-white">
@@ -36,24 +49,49 @@ const Header = () => {
                                 <img style={{maxWidth:"60px"}} src="static/images/Logouoh.png" alt="prueba"/>
                                 </a>
                         <Hidden mdDown>
-                            <nav className="hidden md:flex space-x-10 items-center text-black">
-                                <a href="/" className="hover:text-gray-500"
-                                style={{
-                                    color: pathname === '/acerca' ? '#2563EB' : 'black'
-                                }}>Acerca de</a>
-                                <a href="/" className="hover:text-gray-500"
+                            <nav className="hidden md:flex items-center text-black">
+                                <div>
+                                    <button
+                                        onMouseMove={handleClick}
+                                        aria-controls="simple-menu"
+                                        aria-haspopup="true"
+                                        style={{ background: "none", border: "none" }}
+                                    >
+                                        Acerca de
+                                    </button>
+                                    <Menu
+                                        id="simple-menu"
+                                        anchorEl={anchorEl}
+                                        keepMounted
+                                        open={Boolean(anchorEl)}
+                                        onClose={handleClose}
+                                    >
+                                        <a href="/Infraestructura">
+                                        <MenuItem
+                                            onClick={handleClose}>Infraestructura
+
+                                        </MenuItem></a>
+                                        <a href="/">
+                                        <MenuItem
+                                            onClick={handleClose}>Nosotros
+                                        </MenuItem></a>
+                                    </Menu>
+
+                                </div> <img className="mx-0.5 my-0.5 "src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGNgGFDAysDAEIlHPhKqBgwKGRgYKrEoKsImjq4Yl2YUSbyKYKAYimkMAAtZByDUNaADAAAAAElFTkSuQmCC"/>
+
+                                <a href="/" className="hover:text-gray-500 mx-5"
                                 style={{
                                     color: pathname === '/servicios' ? '#2563EB' : 'black'
                                 }}>Servicios</a>
-                                <a href="/" className="hover:text-gray-500"
+                                <a href="/" className="hover:text-gray-500 mx-5"
                                 style={{
                                     color: pathname === '/noticias' ? '#2563EB' : 'black'
                                 }}>Noticias</a>
-                                <a href="/" className="hover:text-gray-500"
+                                <a href="/" className="hover:text-gray-500 mx-5 "
                                 style={{
                                     color: pathname === '/publicaciones' ? '#2563EB' : 'black'
                                 }}>Publicaciones</a>
-                                <a href="/Contact" className="hover:text-gray-500"
+                                <a href="/Contact" className="hover:text-gray-500 mx-5"
                                 style={{
                                     color: pathname === '/contacto' ? '#2563EB' : 'black'
                                 }}>Contacto</a>
@@ -94,25 +132,23 @@ const Header = () => {
                             }}
                         >
                         </ListItem>
-                        <ListItem button>
-                            <ListItemText primary="Acerca de" />
+                        <ListItem>
+                            <a href="/">
+                                <ListItemText primary="Acerca de"></ListItemText>
+                            </a>
                         </ListItem>
-                        <a href="/" className="hover:text-gray-500 ml-4"
-                           style={{
-                               color: pathname === '/servicios' ? '#2563EB' : 'black'
-                           }}>Servicios</a>
-                        <a href="/" className="hover:text-gray-500 ml-4"
-                           style={{
-                               color: pathname === '/noticias' ? '#2563EB' : 'black'
-                           }}>Noticias</a>
-                        <a href="/Contact" className="hover:text-gray-500 flex ml-4"
-                           style={{
-                               color: pathname === '/contacto' ? '#2563EB' : 'black'
-                           }}>Contacto</a>
-                        <a href="/" className="hover:text-gray-500 flex ml-4"
-                           style={{
-                               color: pathname === '/publicaciones' ? '#2563EB' : 'black'
-                           }}>Publicaciones</a>
+                        <ListItem>
+                            <a href="/"><ListItemText primary="Servicios"></ListItemText> </a>
+                        </ListItem>
+                        <ListItem>
+                            <a href="/"><ListItemText primary="Noticias"></ListItemText> </a>
+                        </ListItem>
+                        <ListItem>
+                            <a href="/"><ListItemText primary="Publicaciones"></ListItemText> </a>
+                        </ListItem>
+                        <ListItem>
+                            <a href="/Contact"><ListItemText primary="Contacto"></ListItemText> </a>
+                        </ListItem>
                     </List>
                 </div>
             </Drawer>
