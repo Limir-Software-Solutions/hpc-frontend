@@ -99,18 +99,22 @@ const Header = () => {
                         <ListItem button>
                             <ListItemText primary="Acerca de" />
                         </ListItem>
-                        <ListItem button>
-                            <ListItemText primary="Servicios" />
-                        </ListItem>
-                        <ListItem button>
-                            <ListItemText primary="Noticias" />
-                        </ListItem>
-                        <ListItem button>
-                            <ListItemText primary="Contacto" />
-                        </ListItem>
-                        <ListItem button>
-                            <ListItemText primary="Publicaciones" />
-                        </ListItem>
+                        <a href="/" className="hover:text-gray-500 ml-4"
+                           style={{
+                               color: pathname === '/servicios' ? '#2563EB' : 'black'
+                           }}>Servicios</a>
+                        <a href="/" className="hover:text-gray-500 ml-4"
+                           style={{
+                               color: pathname === '/noticias' ? '#2563EB' : 'black'
+                           }}>Noticias</a>
+                        <a href="/Contact" className="hover:text-gray-500 flex ml-4"
+                           style={{
+                               color: pathname === '/contacto' ? '#2563EB' : 'black'
+                           }}>Contacto</a>
+                        <a href="/" className="hover:text-gray-500 flex ml-4"
+                           style={{
+                               color: pathname === '/publicaciones' ? '#2563EB' : 'black'
+                           }}>Publicaciones</a>
                     </List>
                 </div>
             </Drawer>
