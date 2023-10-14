@@ -8,9 +8,10 @@ import ForgotPassword from './pages/ForgotPassword';
 import Signup from "./pages/Signup";
 import ConfirmAccount from "./pages/ConfirmAccount";
 import NewPassword from "./pages/NewPassword";
+import Infraestructura from "./pages/Infraestructura";
 import Contact from "./pages/Contact";
 
-
+// Layout
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { AuthProvider } from "./context/AuthProvider";
@@ -20,25 +21,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
+
   {
-      path: "login",
-      element: <Login />,
-  },
-  {
-    path: "forgot-password",
-    element: <ForgotPassword />,
-  },
-  {
-    path: "signup",
-    element: <Signup />,
-  },
-  {
-    path: "confirmar-cuenta/:id",
-    element: <ConfirmAccount />,
-  },
-  {
-    path: "nueva-contrasena/:token",
-    element: <NewPassword />,
+    path: "infraestructura",
+    element: <Infraestructura/>,
   },
   {
     path: "Contact",

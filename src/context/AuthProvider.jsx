@@ -25,7 +25,7 @@ const AuthProvider = ({children}) => {
             }
 
             try {
-                const data = await axios.get(`http://localhost:8081/users/me`, config);
+                const data = await axios.get(`https://services-hpc.onrender.com/users/me`, config);
                 console.log("data", data)
                 setAuth(data.data)
             } catch (e) {
