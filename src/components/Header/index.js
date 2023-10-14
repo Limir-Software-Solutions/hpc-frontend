@@ -9,7 +9,6 @@ import {
     Hidden,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import LoginButton from "../LoginButton";
 import useAuth from "../../hooks/useAuth";
 import AuthAvatar from "../AuthAvatar";
 
@@ -39,26 +38,26 @@ const Header = () => {
                         <Hidden mdDown>
                             <nav className="hidden md:flex space-x-10 items-center text-black">
                                 <a href="/" className="hover:text-gray-500"
-                                   style={{
+                                style={{
                                     color: pathname === '/acerca' ? '#2563EB' : 'black'
                                 }}>Acerca de</a>
                                 <a href="/" className="hover:text-gray-500"
-                                   style={{
-                                       color: pathname === '/servicios' ? '#2563EB' : 'black'
+                                style={{
+                                    color: pathname === '/servicios' ? '#2563EB' : 'black'
                                 }}>Servicios</a>
                                 <a href="/" className="hover:text-gray-500"
-                                   style={{
-                                       color: pathname === '/noticias' ? '#2563EB' : 'black'
+                                style={{
+                                    color: pathname === '/noticias' ? '#2563EB' : 'black'
                                 }}>Noticias</a>
                                 <a href="/" className="hover:text-gray-500"
-                                   style={{
-                                       color: pathname === '/publicaciones' ? '#2563EB' : 'black'
+                                style={{
+                                    color: pathname === '/publicaciones' ? '#2563EB' : 'black'
                                 }}>Publicaciones</a>
                                 <a href="/Contact" className="hover:text-gray-500"
-                                   style={{
-                                       color: pathname === '/contacto' ? '#2563EB' : 'black'
+                                style={{
+                                    color: pathname === '/contacto' ? '#2563EB' : 'black'
                                 }}>Contacto</a>
-                                {auth.auth.name ? <AuthAvatar /> : <LoginButton />}
+
                             </nav>
                         </Hidden>
                         <Hidden mdUp>
@@ -94,7 +93,6 @@ const Header = () => {
                                 justifyContent: "center",
                             }}
                         >
-                            {auth.auth.name ? <AuthAvatar /> : <LoginButton />}
                         </ListItem>
                         <ListItem button>
                             <ListItemText primary="Acerca de" />
