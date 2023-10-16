@@ -40,26 +40,24 @@ const Contact = () => {
 
 
         console.log("god")
-        /*try {
+        try {
           const { data } = await axios.post(
-              `http://localhost:8081/users/contact`,
+              `http://localhost:8081/users/Contact`,
               { email, name, message }
           );
-          setError({});
-    
-          localStorage.setItem('token', data.authToken);
-          setAuth(data);
-          navigate('/')
+          setError({
+              msg: 'Mensaje enviado correctamente',
+              error: false,
+          });
           window.location.reload()
         } catch (e) {
           setError({
             msg: 'El usuario no existe',
             error: true,
           });
-        } */
+        }
       };
       const { msg } = error;
-        setTimeout(() => {setError({})}, 5000);
       return (
         <>
         <div className="py-20 bg-sky-700" style={{ position: "relative" }}>
@@ -124,45 +122,34 @@ const Contact = () => {
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
-                        <textarea name="Text1" cols="40" rows="5"
-                            type={'text'}
-                            placeholder={'Mensaje'}
-                            className={'w-full mt-3 p-3 border rounded-lg bg-gray-100'}
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                        />
+                  <textarea name="Text1" cols="40" rows="5"
+                    type={'text'}
+                    placeholder={'Mensaje'}
+                    className={'w-full mt-3 p-3 border rounded-lg bg-gray-100'}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
                         <input
                             type={'submit'}
                             value={'Enviar'}
                             className={'bg-sky-700 w-full py-3 mt-6 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-sky-800 transition-colors'}
                         />
                         
-            </form>
-                {msg && <Error alerta={error} />}
-        </div>
-        </div>
-    </Container>
-    
-    <iframe className="w-full h-screen justify-center"
-          src="https://maps.google.com/maps?q=universidad%20de%20O'Higgins&amp;t=&amp;z=19&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-          
-        />
-        </>
-        
+                    </form>
+                        {msg && <Error alerta={error} />}
+                    </div>
+                </div>
+            </Container>
 
-
-
-      );
-
-
-
-
-
-
-
-
-
-
+            <div
+                style={{ height: "500px", width: "100%" }}
+            >
+                <iframe className="w-full h-full justify-center"
+                        src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Universidad de O'Higgins&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                />
+            </div>
+      </>
+    );
 };
 
 export default Contact;
