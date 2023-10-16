@@ -48,7 +48,7 @@ const ConfirmarCuenta = () => {
                 {cuentaConfirmada && (
                     <Link
                         className='block text-center mt-4 mb-10 text-white uppercase text-sm rounded bg-sky-600 rounded-3xl w-56 m-auto p-2 font-bold'
-                        to="/login"
+                        to="/"
                     >Confirmar Cuenta</Link>
                 )}
             </div>

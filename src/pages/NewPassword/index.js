@@ -24,6 +24,8 @@ const NewPassword = () => {
                 { password }
             );
 
+            console.log("data", data)
+
             setAlerta({
                 msg: "Contraseña actualizada, inicia sesion",
                 error: false,

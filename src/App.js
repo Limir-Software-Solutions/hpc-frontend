@@ -21,7 +21,18 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
-
+  {
+    path: "confirmar-cuenta/:id",
+    element: <ConfirmAccount />,
+  },
+  {
+    path: "olvide-contraseña",
+    element: <ForgotPassword/>,
+  },
+  {
+    path: "nueva-contrasena/:token",
+    element: <NewPassword />,
+  },
   {
     path: "infraestructura",
     element: <Infraestructura/>,
