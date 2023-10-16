@@ -37,12 +37,9 @@ const Contact = () => {
             return;
         }
 
-
-
-        console.log("god")
         try {
           const { data } = await axios.post(
-              `http://localhost:8081/users/Contact`,
+              `https://services-hpc.onrender.com/users/Contact`,
               { email, name, message }
           );
           setError({
