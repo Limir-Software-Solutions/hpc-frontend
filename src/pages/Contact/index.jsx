@@ -46,7 +46,6 @@ const Contact = () => {
               msg: 'Mensaje enviado correctamente',
               error: false,
           });
-          window.location.reload()
         } catch (e) {
           setError({
             msg: 'El usuario no existe',
