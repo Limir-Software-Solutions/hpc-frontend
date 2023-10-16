@@ -6,7 +6,6 @@ import {useNavigate, useParams} from "react-router-dom";
 
 const NewPassword = () => {
     const [password, setPassword] = useState('');
-    const [newPassword, setNewPassword] = useState('');
     const [alerta, setAlerta] = useState({});
 
     const params = useParams();
@@ -23,8 +22,6 @@ const NewPassword = () => {
                 `https://services-hpc.onrender.com/users/newPassword/${token}`,
                 { password }
             );
-
-            console.log("data", data)
 
             setAlerta({
                 msg: "Contraseña actualizada, inicia sesion",
@@ -77,21 +74,6 @@ const NewPassword = () => {
                                 className={'w-full mt-3 p-3 border rounded-lg bg-gray-100'}
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                            />
-                        </div>
-                        <div className={'my-4'}>
-                            <label
-                                className={'uppercase text-gray-600 block text-xl font-bold'}
-                                htmlFor={'newPassword'}
-                            >
-                                repite Contrasena
-                            </label>
-                            <input
-                                type={'password'}
-                                placeholder={'Escribe tu contrasena'}
-                                className={'w-full mt-3 p-3 border rounded-lg bg-gray-100'}
-                                value={newPassword}
-                                onChange={(e) => setNewPassword(e.target.value)}
                             />
                         </div>
                         <a
