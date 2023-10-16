@@ -46,10 +46,10 @@ const ConfirmarCuenta = () => {
                 {msg && <Error alerta={alerta} />}
 
                 {cuentaConfirmada && (
-                    <Link
+                    <a
                         className='block text-center mt-4 mb-10 text-white uppercase text-sm rounded bg-sky-600 rounded-3xl w-56 m-auto p-2 font-bold'
-                        to="/"
-                    >Confirmar Cuenta</Link>
+                        href='https://hpc-admin.vercel.app'
+                    >Confirmar Cuenta</a>
                 )}
             </div>
         </div>

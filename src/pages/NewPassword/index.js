@@ -95,7 +95,7 @@ const NewPassword = () => {
                             />
                         </div>
                         <a
-                            href={'/login'}
+                            href={'https://hpc-admin.vercel.app'}
                             className="text-sky-600 hover:text-sky-500 transition-colors"
                         >
                             Tienes cuenta? Inicia sesion
