@@ -14,7 +14,7 @@ const ConfirmarCuenta = () => {
     useEffect(() => {
         const confirmarCuenta = async () => {
             try {
-                const url = `http://localhost:8081/users/confirm/${id}`
+                const url = `https://services-hpc.onrender.com/users/confirm/${id}`
                 const { data } = await axios(url)
 
                 setAlerta({

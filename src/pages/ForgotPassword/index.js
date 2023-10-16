@@ -20,7 +20,7 @@ const ForgotPassword = () => {
 
 		try {
 			const { data } = await axios.post(
-				`http://localhost:8081/users/forgotPassword`,
+				`https://services-hpc.onrender.com/users/forgotPassword`,
 				{ email }
 			);
 

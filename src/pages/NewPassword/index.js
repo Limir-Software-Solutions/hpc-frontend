@@ -20,7 +20,7 @@ const NewPassword = () => {
 
         try {
             const { data } = await axios.post(
-                `http://localhost:8081/users/newPassword/${token}`,
+                `https://services-hpc.onrender.com/users/newPassword/${token}`,
                 { password }
             );
 
