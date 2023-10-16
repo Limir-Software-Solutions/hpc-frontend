@@ -25,7 +25,7 @@ const ForgotPassword = () => {
 			);
 
 			setAlerta({
-				msg: data.msg,
+				msg: 'Correo enviado',
 				error: false,
 			});
 		} catch (error) {

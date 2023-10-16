@@ -18,7 +18,7 @@ const ConfirmarCuenta = () => {
                 const { data } = await axios(url)
 
                 setAlerta({
-                    msg: data.msg,
+                    msg: "Cuenta confirmada",
                     error: false
                 })
 

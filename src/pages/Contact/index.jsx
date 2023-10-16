@@ -63,17 +63,19 @@ const Contact = () => {
       return (
         <>
         <div className="py-20 bg-sky-700" style={{ position: "relative" }}>
-            <h1 className="text-3xl text-white font-medium text-left my-2 ml-20 uppercase ">
-                Contacto
-            </h1>
+            <Container>
+                <h1 className="text-3xl text-white font-medium text-left my-2 uppercase ">
+                    Contacto
+                </h1>
+            </Container>
         </div>
         <Container>
-        <div className="flex flex-row -mb-96 justify-between mt-28 h-screen">
+        <div className="flex md:flex-row flex-col md:-mb-96 mb-12 justify-between mt-28 h-screen">
             <div className="flex flex-col w-full mx-auto">
                 <h1 className="text-2xl font-normal text-left my-2 ">
                 No dude en contactarnos si tiene alguna consulta o propuesta respecto a los servicios o actividades del NLHPC.
                 </h1>
-                <div className="flex justify-around flex-row  ">
+                <div className="flex justify-around flex-row mt-12 items-center">
                     <div className="flex flex-col  ">
                         <p className=" font-bold text-left my-2 uppercase ">
                             Email</p>
