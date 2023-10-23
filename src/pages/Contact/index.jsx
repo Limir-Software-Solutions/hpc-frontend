@@ -67,7 +67,7 @@ const Contact = () => {
         <div className="flex md:flex-row flex-col md:-mb-96 mb-12 justify-between mt-28 h-screen">
             <div className="flex flex-col w-full mx-auto">
                 <h1 className="text-2xl font-normal text-left my-2 ">
-                No dude en contactarnos si tiene alguna consulta o propuesta respecto a los servicios o actividades del NLHPC.
+                No dude en contactarnos si tiene alguna consulta o propuesta respecto a los servicios o actividades del HPC-UOH.
                 </h1>
                 <div className="flex justify-around flex-row mt-12 items-center">
                     <div className="flex flex-col  ">
