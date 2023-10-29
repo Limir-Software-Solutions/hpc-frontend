@@ -18,10 +18,10 @@ export default function Home() {
       <Carousel slides={slides}/>
       <Container>
         <div className="justify-between items-center flex my-16 flex-col sm:flex-row">
-          <a href="/">
+          <a href="/Equipo">
           <Cards
             imagen="/static/images/nosotros.webp"
-            titulo="Nosotros"
+            titulo="Equipo"
             texto="Conoce al equipo de investigación detrás de todos los avances, proyectos y publicaciones que han sido posibles gracias al uso de nuestro HPC."
           /></a>
           <a href="/">

@@ -22,13 +22,13 @@ const Footer = () => {
           >
             <ul className="list-unstyled text-white">
               <li>
-                <a className="text-blue-500 font-semibold block pb-2 text-sm" href="/">Nosotros</a>
+                <a className="text-blue-500 font-semibold block pb-2 text-sm">Nosotros</a>
               </li>
               <li>
-                <a className="font-semibold block pb-2 text-sm" href="/">Acerca del HPC</a>
+                <a className="font-semibold block pb-2 text-sm" href="/AcercaDe">Acerca del HPC</a>
               </li>
               <li>
-                <a className="font-semibold block pb-2 text-sm" href="/">Equipo</a>
+                <a className="font-semibold block pb-2 text-sm" href="/Equipo">Equipo</a>
               </li>
               <li>
                 <a className="font-semibold block pb-2 text-sm" href="/">Publicaciones</a>
