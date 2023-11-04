@@ -1,0 +1,29 @@
+{
+    "provider": {
+        "name": "Noticias",
+        "logo": "url_del_logo.jpg",
+        "website": "https://www.noticiasfalsas.com",
+        "contact": {
+            "email": "contacto@noticiasfalsas.com",
+            "phone": "+123456789"
+        }
+    },
+    "articles": [
+        {
+            "title": "Los extraterrestres visitan la Tierra",
+            "summary": "Reportes de avistamientos de OVNIs en la capital.",
+            "content": "Hoy en la madrugada, varios residentes reportaron avistamientos de objetos voladores no identificados...",
+            "author": "Juan Pérez",
+            "date": "2023-10-30",
+            "image": "url_de_la_imagen1.jpg"
+        },
+        {
+            "title": "El yeti capturado en las montañas",
+            "summary": "Una expedición en el Himalaya dice haber encontrado al legendario yeti.",
+            "content": "El equipo de exploradores liderado por María Sánchez afirma haber capturado a una criatura...",
+            "author": "Ana Gómez",
+            "date": "2023-10-29",
+            "image": "url_de_la_imagen2.jpg"
+        }
+    ]
+}
