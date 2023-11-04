@@ -31,14 +31,14 @@ const Header = () => {
     const handleDrawerClose = () => {
         setIsDrawerOpen(false);
     };
-    const handleClick = async (event) => {
+    const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
 
     const handleClose = () => {
         setAnchorEl(null);
     };
-    setTimeout(() => {handleClick({})}, 5000);
+    //setTimeout(() => {handleClick({})}, 5000);
 
     return (
         <div className="bg-white">
@@ -50,34 +50,41 @@ const Header = () => {
                                 </a>
                         <Hidden mdDown>
                             <nav className="hidden md:flex items-center text-black">
-                                <div>
                                     <button
-                                        onMouseMove={handleClick}
+                                        onMouseOver={handleClick}
                                         aria-controls="simple-menu"
                                         aria-haspopup="true"
                                         style={{ background: "none", border: "none" }}
                                     >
-                                        Acerca de
+                                        A cerca del HPC
                                     </button>
                                     <Menu
                                         id="simple-menu"
                                         anchorEl={anchorEl}
                                         keepMounted
                                         open={Boolean(anchorEl)}
-                                        onClose={handleClose}
+                                        onClose = {handleClose}
+
                                     >
+                                        <a href="/AcercaDe">
+                                            <MenuItem
+                                                onClick={handleClose}>A cerca del HPC
+                                            </MenuItem></a>
                                         <a href="/Infraestructura">
                                         <MenuItem
+
                                             onClick={handleClose}>Infraestructura
 
                                         </MenuItem></a>
-                                        <a href="/">
+                                        <a href="/Equipo">
                                         <MenuItem
-                                            onClick={handleClose}>Nosotros
+                                            onClick={handleClose}>Equipo
                                         </MenuItem></a>
+
                                     </Menu>
 
-                                </div> <img className="mx-0.5 my-0.5 "src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGNgGFDAysDAEIlHPhKqBgwKGRgYKrEoKsImjq4Yl2YUSbyKYKAYimkMAAtZByDUNaADAAAAAElFTkSuQmCC"/>
+
+                                 <img className="mx-0.5 my-0.5 "src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGNgGFDAysDAEIlHPhKqBgwKGRgYKrEoKsImjq4Yl2YUSbyKYKAYimkMAAtZByDUNaADAAAAAElFTkSuQmCC"/>
 
                                 <a href="/" className="hover:text-gray-500 mx-5"
                                 style={{
@@ -133,8 +140,8 @@ const Header = () => {
                         >
                         </ListItem>
                         <ListItem>
-                            <a href="/">
-                                <ListItemText primary="Acerca de"></ListItemText>
+                            <a href="/AcercaDe">
+                                <ListItemText primary="A cerca del HPC"></ListItemText>
                             </a>
                         </ListItem>
                         <ListItem>
