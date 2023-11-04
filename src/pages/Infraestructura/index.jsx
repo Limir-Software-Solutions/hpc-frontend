@@ -121,13 +121,14 @@ export default function Infraestructura() {
             </Grid>
 
           </Grid>
-
-          <Box my={4}>
-            <img src="static\images\clusteruoh.jpeg" alt="Imagen del Cluster" width="25%" />
-          </Box>
-          <Box my={4}>
-            <img src="static\images\Facilities_digenoma_lab_cluster.jpeg" alt="Imagen del Cluster" width="50%" />
-          </Box>
+          <div className="flex flex-row items-center justify-between my-8">
+            <div className="flex justify-center mx-1">
+              <img src="static\images\Cluster-1.jpg" alt="Imagen del Cluster" width="100%" />
+            </div>
+            <div className="flex justify-center mx-1">
+              <img src="static\images\Cluster-3.jpg" alt="Imagen del Cluster" width="100%" />
+            </div>
+          </div>
 
           {/* Aquí puedes agregar las imágenes y gráficos correspondientes */}
           {/* Puedes usar Grid para estructurar las imágenes y textos dentro de esta sección. */}

@@ -31,14 +31,14 @@ const Header = () => {
     const handleDrawerClose = () => {
         setIsDrawerOpen(false);
     };
-    const handleClick = async (event) => {
+    const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
 
     const handleClose = () => {
         setAnchorEl(null);
     };
-    setTimeout(() => {handleClick({})}, 5000);
+    //setTimeout(() => {handleClick({})}, 5000);
 
     return (
         <div className="bg-white">
@@ -50,9 +50,6 @@ const Header = () => {
                                 </a>
                         <Hidden mdDown>
                             <nav className="hidden md:flex items-center text-black">
-                                <div>
-
-
                                     <button
                                         onMouseOver={handleClick}
                                         aria-controls="simple-menu"
@@ -62,12 +59,12 @@ const Header = () => {
                                         A cerca del HPC
                                     </button>
                                     <Menu
-
                                         id="simple-menu"
                                         anchorEl={anchorEl}
                                         keepMounted
                                         open={Boolean(anchorEl)}
-                                        onMouseClick={handleClose}
+                                        onClose = {handleClose}
+
                                     >
                                         <a href="/AcercaDe">
                                             <MenuItem
@@ -86,7 +83,8 @@ const Header = () => {
 
                                     </Menu>
 
-                                </div> <img className="mx-0.5 my-0.5 "src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGNgGFDAysDAEIlHPhKqBgwKGRgYKrEoKsImjq4Yl2YUSbyKYKAYimkMAAtZByDUNaADAAAAAElFTkSuQmCC"/>
+
+                                 <img className="mx-0.5 my-0.5 "src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGNgGFDAysDAEIlHPhKqBgwKGRgYKrEoKsImjq4Yl2YUSbyKYKAYimkMAAtZByDUNaADAAAAAElFTkSuQmCC"/>
 
                                 <a href="/" className="hover:text-gray-500 mx-5"
                                 style={{

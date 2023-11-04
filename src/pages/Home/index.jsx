@@ -20,7 +20,7 @@ export default function Home() {
         <div className="justify-between items-center flex my-16 flex-col sm:flex-row">
           <a href="/Equipo">
           <Cards
-            imagen="/static/images/nosotros.webp"
+            imagen="/static/images/Presentación Cluster-10.jpg"
             titulo="Equipo"
             texto="Conoce al equipo de investigación detrás de todos los avances, proyectos y publicaciones que han sido posibles gracias al uso de nuestro HPC."
           /></a>
@@ -34,7 +34,7 @@ export default function Home() {
           <a href="/Infraestructura">
           <Cards
 
-            imagen="/static/images/hpc.png"
+            imagen="/static/images/Laboratorios - Cluster-3.jpg"
             titulo="Infraestructura"
             texto="El supercomputador más poderoso de la Sexta Región está disponible para los investigadores de todo el país."
           />
