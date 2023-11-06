@@ -1,0 +1,40 @@
+{
+    "provider": {
+        "name": "Noticias",
+        "logo": "url_del_logo.jpg",
+        "website": "https://www.noticiasfalsas.com",
+        "contact": {
+            "email": "contacto@noticiasfalsas.com",
+            "phone": "+123456789"
+        }
+    },
+    "articles": [
+        {
+            "title": "Refrigeración líquida para un superordenador de Harvard de la mano de Lenovo",
+            "summary": "La Universidad de Harvard ha renovado su tecnología. Ha anunciado el que es su mayor clúster de computación de alto rendimiento, de nombre Cannon, para tareas de modelado y simulación que respaldará la labor investigadora de unos 600 grupos y 4 500 personas en cuestiones como ciencia, ingeniería, ciencias sociales, salud pública y educación.",
+            "content": "El centro FASRC anuncia un clúster más rápido con servidores ThinkSystem que incluyen refrigeración líquida Neptune y procesadores Intel Xeon. ",
+            "author": "Silicon Technology Powering Business",
+            "date": "2019-11-21",
+            "image": "./static/images/Cannon_Supercomputing_Cluster_Harvard.jpg",
+            "link": "https://www.silicon.es/refrigeracion-liquida-para-un-superordenador-de-harvard-de-la-mano-de-lenovo-2408477 "
+        },
+        {
+            "title": "Revisión del SSD Solidigm P5336 de 61,44 TB",
+            "summary": "El Solidigm P5336 representa un hito en la tecnología SSD, ya que ofrece capacidades de almacenamiento que van desde 7,68 TB hasta la asombrosa cifra de 61,44 TB. Este enorme punto de capacidad tendrá un impacto significativo en los ecosistemas de servidores de datos. Disponible en varios factores de forma, incluidos U.2 de 15 mm, E3.S de 7,5 mm y E1.L de 9,5 mm, el P5336 ofrece a las organizaciones una escalabilidad sustancial en entornos de almacenamiento de alta densidad. ",
+            "content": "Tecnologia SSD 61,44 TB",
+            "author": "Lyle Smith",
+            "date": "2023-08-02",
+            "image": "./static/images/StorageReview-Soldigm.jpg",
+            "link": "https://www.storagereview.com/review/solidigm-p5336-61-44tb-ssd-review "
+        },
+        {
+            "title": "Resolviendo el almacenamiento de Steam Deck Shader con un SSD de 61,44 TB",
+            "summary": "En el laboratorio StorageReview, donde la innovación no conoce límites y los dispositivos comunes sufren transformaciones extraordinarias, nos embarcamos en un proyecto como ningún otro. Armado con el poderoso Valve Steam Deck, una potencia de juegos por derecho propio, y un monstruoso SSD empresarial Solidigm P5336 de 61,44 TB, nuestro objetivo era eliminar las limitaciones de almacenamiento intrínsecas al diseño de Steam Deck. ",
+            "content": "La nueva especie de planta tiene la capacidad de...",
+            "author": "Jordan Ranous",
+            "date": "2023-11-01",
+            "image": "./static/images/StorageReview-Solidigm-Steam.jpg",
+            "link": "https://www.storagereview.com/review/solving-steam-deck-shader-storage-with-a-61-44tb-ssd "
+        }
+    ]
+}

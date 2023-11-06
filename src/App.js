@@ -10,6 +10,9 @@ import ConfirmAccount from "./pages/ConfirmAccount";
 import NewPassword from "./pages/NewPassword";
 import Infraestructura from "./pages/Infraestructura";
 import Contact from "./pages/Contact";
+import AcercaDe from "./pages/AcercaDe";
+import Equipo from "./pages/Equipo";
+import Noticias from "./pages/Noticias";
 
 // Layout
 import Footer from './components/Footer';
@@ -40,6 +43,19 @@ const router = createBrowserRouter([
   {
     path: "Contact",
     element: <Contact />,
+  },
+  {
+    path: "AcercaDe",
+    element: <AcercaDe />,
+  },
+  {
+    path: "Equipo",
+    element: <Equipo />,
+  },
+  {
+    path:"Noticias",
+    element: <Noticias />,
+
   },
 ]);
 
