@@ -24,7 +24,7 @@ export default function Home() {
             titulo="Equipo"
             texto="Conoce al equipo de investigación detrás de todos los avances, proyectos y publicaciones que han sido posibles gracias al uso de nuestro HPC."
           /></a>
-          <a href="/">
+          <a href="/Noticias">
           <Cards
             imagen="/static/images/noti.png"
             titulo="Noticias"

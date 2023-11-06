@@ -90,7 +90,7 @@ const Header = () => {
                                 style={{
                                     color: pathname === '/servicios' ? '#2563EB' : 'black'
                                 }}>Servicios</a>
-                                <a href="/" className="hover:text-gray-500 mx-5"
+                                <a href="/Noticias" className="hover:text-gray-500 mx-5"
                                 style={{
                                     color: pathname === '/noticias' ? '#2563EB' : 'black'
                                 }}>Noticias</a>
@@ -148,7 +148,7 @@ const Header = () => {
                             <a href="/"><ListItemText primary="Servicios"></ListItemText> </a>
                         </ListItem>
                         <ListItem>
-                            <a href="/"><ListItemText primary="Noticias"></ListItemText> </a>
+                            <a href="/Noticias"><ListItemText primary="Noticias"></ListItemText> </a>
                         </ListItem>
                         <ListItem>
                             <a href="/"><ListItemText primary="Publicaciones"></ListItemText> </a>
