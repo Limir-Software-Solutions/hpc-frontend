@@ -51,7 +51,7 @@ const Header = () => {
                         <Hidden mdDown>
                             <nav className="hidden md:flex items-center text-black">
                                     <button
-                                        onMouseOver={handleClick}
+                                        onClick={handleClick}
                                         aria-controls="simple-menu"
                                         aria-haspopup="true"
                                         style={{ background: "none", border: "none" }}
