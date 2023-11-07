@@ -10,7 +10,7 @@ const AcercaDe = () => {
       <div className="py-20 bg-sky-700" style={{ position: "relative" }}>
         <Container>
           <h1 className="text-3xl text-white font-medium text-left my-2 uppercase ">
-            A cerca del HPC
+            Acerca del HPC
           </h1>
         </Container>
       </div>

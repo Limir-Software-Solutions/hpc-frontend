@@ -56,7 +56,7 @@ const Header = () => {
                                         aria-haspopup="true"
                                         style={{ background: "none", border: "none" }}
                                     >
-                                        A cerca del HPC
+                                        Acerca del HPC
                                     </button>
                                     <Menu
                                         id="simple-menu"
@@ -68,7 +68,7 @@ const Header = () => {
                                     >
                                         <a href="/AcercaDe">
                                             <MenuItem
-                                                onClick={handleClose}>A cerca del HPC
+                                                onClick={handleClose}>Acerca del HPC
                                             </MenuItem></a>
                                         <a href="/Infraestructura">
                                         <MenuItem
