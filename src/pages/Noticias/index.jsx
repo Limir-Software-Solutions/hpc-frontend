@@ -9,7 +9,8 @@ export default function Noticias() {
     useEffect(() => {
         const fetchData = async () => {
             const {data} = await axios.get('https://services-hpc.onrender.com/news')
-            setArticles(data.rows)
+            const sortedArticles = data.rows.sort((a, b) => new Date(a.publicationDate) - new Date(b.publicationDate));
+            setArticles(sortedArticles)
         }
 
         fetchData()
