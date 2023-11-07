@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import AcercaDe from "./pages/AcercaDe";
 import Equipo from "./pages/Equipo";
 import Noticias from "./pages/Noticias";
+import NewsDetail from "./pages/NewsDetail";
 
 // Layout
 import Footer from './components/Footer';
@@ -55,7 +56,10 @@ const router = createBrowserRouter([
   {
     path:"Noticias",
     element: <Noticias />,
-
+  },
+  {
+    path:"detail/:id",
+    element: <NewsDetail />,
   },
 ]);
 

@@ -137,16 +137,12 @@ const Contact = () => {
 
                 </div>
 
-
             </Container>
             <div className="flex flex-col w-full h-screen">
                 <iframe style={{height:"100%" , position:"sticky"}}
                         src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Universidad de O'Higgins&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 />
             </div>
-
-
-
         </>
     );
 };

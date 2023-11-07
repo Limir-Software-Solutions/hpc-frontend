@@ -86,10 +86,6 @@ const Header = () => {
 
                                  <img className="mx-0.5 my-0.5 "src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGNgGFDAysDAEIlHPhKqBgwKGRgYKrEoKsImjq4Yl2YUSbyKYKAYimkMAAtZByDUNaADAAAAAElFTkSuQmCC"/>
 
-                                <a href="/" className="hover:text-gray-500 mx-5"
-                                style={{
-                                    color: pathname === '/servicios' ? '#2563EB' : 'black'
-                                }}>Servicios</a>
                                 <a href="/Noticias" className="hover:text-gray-500 mx-5"
                                 style={{
                                     color: pathname === '/noticias' ? '#2563EB' : 'black'
@@ -143,9 +139,6 @@ const Header = () => {
                             <a href="/AcercaDe">
                                 <ListItemText primary="A cerca del HPC"></ListItemText>
                             </a>
-                        </ListItem>
-                        <ListItem>
-                            <a href="/"><ListItemText primary="Servicios"></ListItemText> </a>
                         </ListItem>
                         <ListItem>
                             <a href="/Noticias"><ListItemText primary="Noticias"></ListItemText> </a>

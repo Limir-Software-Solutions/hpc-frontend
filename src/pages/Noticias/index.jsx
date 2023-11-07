@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import { Container, Card, Typography, Box, Grid, Paper, CardMedia, CardContent, CardActions, Button } from '@mui/material';
 import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 
 export default function Noticias() {
 
     const [articles, setArticles] = useState([])
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -54,7 +56,10 @@ export default function Noticias() {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button size="small">Leer más</Button>
+                                <Button
+                                    size="small"
+                                    onClick={() => navigate(`/detail/${article._id}`)}
+                                >Leer más</Button>
                             </CardActions>
                         </Card>
                     </Grid>
