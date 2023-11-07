@@ -51,12 +51,12 @@ const Header = () => {
                         <Hidden mdDown>
                             <nav className="hidden md:flex items-center text-black">
                                     <button
-                                        onMouseOver={handleClick}
+                                        onClick={handleClick}
                                         aria-controls="simple-menu"
                                         aria-haspopup="true"
                                         style={{ background: "none", border: "none" }}
                                     >
-                                        A cerca del HPC
+                                        Acerca del HPC
                                     </button>
                                     <Menu
                                         id="simple-menu"
@@ -68,7 +68,7 @@ const Header = () => {
                                     >
                                         <a href="/AcercaDe">
                                             <MenuItem
-                                                onClick={handleClose}>A cerca del HPC
+                                                onClick={handleClose}>Acerca del HPC
                                             </MenuItem></a>
                                         <a href="/Infraestructura">
                                         <MenuItem
@@ -86,10 +86,6 @@ const Header = () => {
 
                                  <img className="mx-0.5 my-0.5 "src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGNgGFDAysDAEIlHPhKqBgwKGRgYKrEoKsImjq4Yl2YUSbyKYKAYimkMAAtZByDUNaADAAAAAElFTkSuQmCC"/>
 
-                                <a href="/" className="hover:text-gray-500 mx-5"
-                                style={{
-                                    color: pathname === '/servicios' ? '#2563EB' : 'black'
-                                }}>Servicios</a>
                                 <a href="/Noticias" className="hover:text-gray-500 mx-5"
                                 style={{
                                     color: pathname === '/noticias' ? '#2563EB' : 'black'
@@ -143,9 +139,6 @@ const Header = () => {
                             <a href="/AcercaDe">
                                 <ListItemText primary="A cerca del HPC"></ListItemText>
                             </a>
-                        </ListItem>
-                        <ListItem>
-                            <a href="/"><ListItemText primary="Servicios"></ListItemText> </a>
                         </ListItem>
                         <ListItem>
                             <a href="/Noticias"><ListItemText primary="Noticias"></ListItemText> </a>

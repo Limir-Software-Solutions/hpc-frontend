@@ -181,14 +181,14 @@ export default function Infraestructura() {
         <div className="flex flex-row items-center justify-between my-8">
           <div className="flex justify-center mx-1">
             <img
-              src="static\images\Cluster-1.jpg"
+              src="static\images\Cluster-1.JPG"
               alt="Imagen del Cluster"
               width="100%"
             />
           </div>
           <div className="flex justify-center mx-1">
             <img
-              src="static\images\Cluster-3.jpg"
+              src="static\images\Cluster-3.JPG"
               alt="Imagen del Cluster"
               width="100%"
             />
