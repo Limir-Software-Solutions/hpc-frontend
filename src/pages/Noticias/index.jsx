@@ -37,8 +37,8 @@ export default function Noticias() {
                                 <CardMedia
                                     component="img"
                                     height="140"
-                                    image={ "https://via.placeholder.com/250x250"}
-                                    alt={article.title}
+                                    image={ article.image.src }
+                                    alt={article.image.title}
                                 />
                             )}
                             <CardContent>
