@@ -20,7 +20,7 @@ export default function Home() {
         <div className="justify-between items-center flex my-16 flex-col sm:flex-row">
           <a href="/Equipo">
           <Cards
-            imagen="/static/images/Presentación Cluster-10.jpg"
+            imagen="/static/images/Presentación Cluster-10.JPG"
             titulo="Equipo"
             texto="Conoce al equipo de investigación detrás de todos los avances, proyectos y publicaciones que han sido posibles gracias al uso de nuestro HPC."
           /></a>
