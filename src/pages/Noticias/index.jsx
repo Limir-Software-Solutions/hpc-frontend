@@ -1,27 +1,40 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Container, Card, Typography, Box, Grid, Paper, CardMedia, CardContent, CardActions, Button } from '@mui/material';
-import Provider from './Provider.json' // Asegúrate de que la ruta sea la correcta
+import axios from 'axios'
 
 export default function Noticias() {
-    const { provider, articles } = Provider;
+
+    const [articles, setArticles] = useState([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const {data} = await axios.get('https://services-hpc.onrender.com/news')
+            setArticles(data.rows)
+        }
+
+        fetchData()
+    }, []);
+
+    console.log(articles)
 
     return (
         <Container>
             <Box my={4}>
                 <Typography variant="h4" component="h1" gutterBottom>
-                    Noticias{/* de {provider.name}*/}
+                    Noticias
                 </Typography>
-                {/* Puedes incluir más detalles del proveedor aquí si es necesario */}
             </Box>
-            <Grid container spacing={4}>
-                {articles.map((article, index) => (
+            <Grid container spacing={4} sx={{
+                marginBottom: "4rem"
+            }}>
+                {  articles.map((article, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
                         <Card>
                             {article.image && (
                                 <CardMedia
                                     component="img"
                                     height="140"
-                                    image={article.image}
+                                    image={ "https://via.placeholder.com/250x250"}
                                     alt={article.title}
                                 />
                             )}
@@ -44,8 +57,9 @@ export default function Noticias() {
                             </CardActions>
                         </Card>
                     </Grid>
-                ))}
+                )) }
             </Grid>
         </Container>
     );
 }
+
