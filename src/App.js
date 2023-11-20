@@ -14,6 +14,7 @@ import AcercaDe from "./pages/AcercaDe";
 import Equipo from "./pages/Equipo";
 import Noticias from "./pages/Noticias";
 import NewsDetail from "./pages/NewsDetail";
+import Papers from "./pages/Papers";
 
 // Layout
 import Footer from './components/Footer';
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
   {
     path:"detail/:id",
     element: <NewsDetail />,
+  },
+  {
+    path:"Papers",
+    element: <Papers />,
   },
 ]);
 
