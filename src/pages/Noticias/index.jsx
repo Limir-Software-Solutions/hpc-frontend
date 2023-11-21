@@ -21,12 +21,16 @@ export default function Noticias() {
     console.log(articles)
 
     return (
-        <Container>
-            <Box my={4}>
-                <Typography variant="h4" component="h1" gutterBottom>
+        <>
+        <div className="py-20 bg-sky-700 my-4" style={{ position: "relative" }}>
+            <Container>
+                <h1 className="text-3xl text-white font-medium text-left my-2 uppercase ">
                     Noticias
-                </Typography>
-            </Box>
+                </h1>
+            </Container>
+        </div>
+        <Container>
+
             <Grid container spacing={4} sx={{
                 marginBottom: "4rem"
             }}>
@@ -66,6 +70,7 @@ export default function Noticias() {
                 )) }
             </Grid>
         </Container>
+        </>
     );
 }
 

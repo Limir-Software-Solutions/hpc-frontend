@@ -31,7 +31,7 @@ const Footer = () => {
                 <a className="font-semibold block pb-2 text-sm" href="/Equipo">Equipo</a>
               </li>
               <li>
-                <a className="font-semibold block pb-2 text-sm" href="/">Publicaciones</a>
+                <a className="font-semibold block pb-2 text-sm" href="/Papers">Publicaciones</a>
               </li>
             </ul>
             <ul className="list-unstyled text-white">

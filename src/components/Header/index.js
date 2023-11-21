@@ -90,9 +90,9 @@ const Header = () => {
                                 style={{
                                     color: pathname === '/noticias' ? '#2563EB' : 'black'
                                 }}>Noticias</a>
-                                <a href="/" className="hover:text-gray-500 mx-5 "
+                                <a href="/Papers" className="hover:text-gray-500 mx-5 "
                                 style={{
-                                    color: pathname === '/publicaciones' ? '#2563EB' : 'black'
+                                    color: pathname === '/papers' ? '#2563EB' : 'black'
                                 }}>Publicaciones</a>
                                 <a href="/Contact" className="hover:text-gray-500 mx-5"
                                 style={{
@@ -137,14 +137,14 @@ const Header = () => {
                         </ListItem>
                         <ListItem>
                             <a href="/AcercaDe">
-                                <ListItemText primary="A cerca del HPC"></ListItemText>
+                                <ListItemText primary="Acerca del HPC"></ListItemText>
                             </a>
                         </ListItem>
                         <ListItem>
                             <a href="/Noticias"><ListItemText primary="Noticias"></ListItemText> </a>
                         </ListItem>
                         <ListItem>
-                            <a href="/"><ListItemText primary="Publicaciones"></ListItemText> </a>
+                            <a href="/Papers"><ListItemText primary="Publicaciones"></ListItemText> </a>
                         </ListItem>
                         <ListItem>
                             <a href="/Contact"><ListItemText primary="Contacto"></ListItemText> </a>
