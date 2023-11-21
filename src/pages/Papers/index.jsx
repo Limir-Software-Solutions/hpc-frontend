@@ -18,16 +18,33 @@ export default function Papers() {
     }, []);
 
     return (
+        <>
+            <div className="py-20 bg-sky-700" style={{ position: "relative" }}>
+                <Container>
+                    <h1 className="text-3xl text-white font-medium text-left my-2 uppercase ">
+                        Publicaciones
+                    </h1>
+                </Container>
+            </div>
         <Container>
-            <Box my={4}>
-                <Typography variant="h4" component="h1" gutterBottom>
-                    Papers
-                </Typography>
-            </Box>
+
             <Grid container spacing={4} sx={{ marginBottom: "4rem" }}>
                 {papers.map((paper, index) => (
+                    <div className="flex flex-col justify-items-center my-2 mx-3 mt-3">
                     <Grid item xs={12} sm={6} md={4} key={index}>
-                        <Card>
+                        <Card sx={{
+                            flexBasis: '30%',
+                            maxWidth: 1500,
+                            width: 1500,
+                            height: 175,
+                            borderRadius: 10,
+                            boxShadow: 3,
+                            marginY: 2,
+                            marginX: 2,
+                            '@media (max-width: 600px)': {
+                                flexDirection: 'row',
+                            },
+                        }}>
                             {/* Aquí puedes agregar una imagen si está disponible */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
@@ -51,8 +68,11 @@ export default function Papers() {
                             </CardActions>
                         </Card>
                     </Grid>
+                    </div>
                 ))}
             </Grid>
+
         </Container>
+        </>
     );
 }
