@@ -123,56 +123,71 @@ const Equipo = () => {
               width={"100%"}
               style={{ background: "black", height: "2px" }}
           ></hr>
-          <h1 className="text-2xl my-2 ">
+          <h1 className="text-2xl my-4 ">
             Equipo de Desarrollo
           </h1>
-          <div className="flex flex-row md:flex-row justify-between">
-            <div className="flex flex-col">
-            <img className="rounded-full"
+          <div className="flex flex-col md:flex-row justify-between my-4">
+            <div className="flex-row justify-items-center">
+            <img className="rounded-full my-3"
                 style={{ maxWidth: "200px" }}
-                src="static/images/luis.jpeg"
+                src="static/images/luis.jpg"
                 alt="prueba"
             />
-              <h1 className="text-center">Luis Miranda</h1>
-              <h1 className="text-center">Cum Master</h1>
+              <div className="flex-row text-justify ml-3">
+              <h1 className="ml-11 ">Luis Miranda</h1>
+              <h1 className="ml-10 ">Scrum Master</h1>
+              </div>
             </div>
 
-            <div className="flex flex-col">
-              <img className="rounded-full"
+
+            <div className="flex-row justify-items-center">
+              <img className="rounded-full my-3"
                    style={{ maxWidth: "200px" }}
-                   src="static/images/ivan.jpeg"
+                   src="static/images/ivan.jpg"
                    alt="prueba"
               />
-              <h1 className="text-center">Iván Bozo</h1>
-              <h1 className="text-center">Catador de Anos</h1>
-            </div>
-            <div className="flex flex-col">
-              <img className="rounded-full"
+              <div className="flex-row text-justify ml-14">
+              <h1 >Iván Bozo</h1>
+              <h1 className="ml-3">Tester</h1>
+              </div>
+              </div>
+
+            <div className="flex-row justify-items-center">
+              <img className="rounded-full my-3"
                    style={{ maxWidth: "200px" }}
-                   src="static/images/lukas.jpeg"
+                   src="static/images/lukas.jpg"
                    alt="prueba"
               />
-              <h1 className="text-center">Lukas Flores</h1>
-              <h1 className="text-center">El God</h1>
+              <div className="flex-row text-left ml-6">
+              <h1 className="ml-9">Lukas Flores</h1>
+              <h1  >Desarrollador full stack</h1>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <img className="rounded-full"
+
+            <div className="flex-row justify-items-center">
+              <img className="rounded-full my-3"
                    style={{ maxWidth: "200px" }}
-                   src="static/images/mauri.jpeg"
+                   src="static/images/mauri.jpg"
                    alt="prueba"
               />
-              <h1 className="text-center">Mauricio Meza</h1>
-              <h1 className="text-center">El alérgico al sexo</h1>
+              <div className="flex-row text-left ml-5">
+              <h1 className="ml-7">Mauricio Meza</h1>
+              <h1 >Desarrollador backend</h1>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <img className="rounded-full"
+
+            <div className="flex-row justify-items-center">
+              <img className="rounded-full my-3"
                    style={{ maxWidth: "200px" }}
-                   src="static/images/rodri.jpeg"
+                   src="static/images/rodri.jpg"
                    alt="prueba"
               />
-              <h1 className="text-center">Rodrigo Llancao</h1>
-              <h1 className="text-center">El adicto al sexo</h1>
+              <div className="flex-row text-left ml-7">
+              <h1 className="ml-5">Rodrigo Llancao</h1>
+              <h1 >Desarrollador frontend</h1>
+              </div>
             </div>
+
           </div>
 
 

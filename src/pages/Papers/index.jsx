@@ -30,7 +30,7 @@ export default function Papers() {
 
             <div className=" justify-center md:flex-row">
                 {papers.map((paper, index) => (
-                    <div className="flex flex-col my-5">
+                    <div className="flex flex-col my-6">
 
                         <Card className="border-x border-x-4 shadow-lg ">
                             {/* Aquí puedes agregar una imagen si está disponible */}

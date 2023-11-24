@@ -40,7 +40,7 @@ export default function NewsDetail() {
                 <img
                     src={article.image.src}
                     title={article.image.title}
-                    className="w-full h-96"
+                    className="w-full h-auto"
                 />
             }
             <p

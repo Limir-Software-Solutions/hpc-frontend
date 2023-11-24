@@ -1,8 +1,14 @@
 import React from "react";
+import Card from '@mui/material/Card';
 
 const ProfessorCard = ({ imagen, descripcion, nombre, rol, contacto }) => {
   return (
     <>
+        <Card sx={{
+            boxShadow: 2,
+            paddingX: "20px",
+            marginTop: "3rem",
+        }}>
       <div className="flex flex-col my-4 md:flex-row ">
         <img className="flex md:flex-col md:justify rounded-full" style={{ maxWidth: "250px", maxHeight:"250px" }} src={imagen} alt="prueba" />
 
@@ -15,6 +21,7 @@ const ProfessorCard = ({ imagen, descripcion, nombre, rol, contacto }) => {
 
         <h1 className="text-sky-700 ">{contacto}</h1>
       </div>
+        </Card>
     </>
   );
 };
