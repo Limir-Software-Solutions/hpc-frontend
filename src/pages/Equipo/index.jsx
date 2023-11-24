@@ -43,7 +43,7 @@ const Equipo = () => {
               alt="prueba"
             />
 
-            <div className=" mx-5">
+            <div className="text-justify mx-5">
               <p>
                 Alex Di Genova es Ingeniero en Bioinformática de la Universidad
                 de Talca y Doctor en Ingeniería de Sistemas Complejos de la
@@ -86,7 +86,7 @@ const Equipo = () => {
           style={{ background: "black", height: "2px" }}
         ></hr>
         <div className="flex flex-col my-2">
-          <h1 className="text-2xl my-2">Nuestro Equipo</h1>
+          <h1 className="text-2xl my-2">Equipo de Investigación</h1>
 
           <ProfessorCard
             imagen={"static/images/raul.jpeg"}
@@ -117,7 +117,84 @@ const Equipo = () => {
             rol={"Profesora Asistente"}
             contacto={"carol.moraga@uoh.cl"}
           />
+          <hr
+              color={"black"}
+              size={"2"}
+              width={"100%"}
+              style={{ background: "black", height: "2px" }}
+          ></hr>
+          <h1 className="text-2xl my-4 ">
+            Equipo de Desarrollo
+          </h1>
+          <div className="flex flex-col md:flex-row justify-between my-4">
+            <div className="flex-row justify-items-center">
+            <img className="rounded-full my-3"
+                style={{ maxWidth: "200px" }}
+                src="static/images/luis.jpg"
+                alt="prueba"
+            />
+              <div className="flex-row text-justify ml-3">
+              <h1 className="ml-11 ">Luis Miranda</h1>
+              <h1 className="ml-10 ">Scrum Master</h1>
+              </div>
+            </div>
+
+
+            <div className="flex-row justify-items-center">
+              <img className="rounded-full my-3"
+                   style={{ maxWidth: "200px" }}
+                   src="static/images/ivan.jpg"
+                   alt="prueba"
+              />
+              <div className="flex-row text-justify ml-14">
+              <h1 >Iván Bozo</h1>
+              <h1 className="ml-3">Tester</h1>
+              </div>
+              </div>
+
+            <div className="flex-row justify-items-center">
+              <img className="rounded-full my-3"
+                   style={{ maxWidth: "200px" }}
+                   src="static/images/lukas.jpg"
+                   alt="prueba"
+              />
+              <div className="flex-row text-left ml-6">
+              <h1 className="ml-9">Lukas Flores</h1>
+              <h1  >Desarrollador full stack</h1>
+              </div>
+            </div>
+
+            <div className="flex-row justify-items-center">
+              <img className="rounded-full my-3"
+                   style={{ maxWidth: "200px" }}
+                   src="static/images/mauri.jpg"
+                   alt="prueba"
+              />
+              <div className="flex-row text-left ml-5">
+              <h1 className="ml-7">Mauricio Meza</h1>
+              <h1 >Desarrollador backend</h1>
+              </div>
+            </div>
+
+            <div className="flex-row justify-items-center">
+              <img className="rounded-full my-3"
+                   style={{ maxWidth: "200px" }}
+                   src="static/images/rodri.jpg"
+                   alt="prueba"
+              />
+              <div className="flex-row text-left ml-7">
+              <h1 className="ml-5">Rodrigo Llancao</h1>
+              <h1 >Desarrollador frontend</h1>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
         </div>
+
       </Container>
     </>
   );

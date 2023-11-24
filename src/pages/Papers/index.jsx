@@ -28,23 +28,11 @@ export default function Papers() {
             </div>
         <Container>
 
-            <Grid container spacing={4} sx={{ marginBottom: "4rem" }}>
+            <div className=" justify-center md:flex-row">
                 {papers.map((paper, index) => (
-                    <div className="flex flex-col justify-items-center my-2 mx-3 mt-3">
-                    <Grid item xs={12} sm={6} md={4} key={index}>
-                        <Card sx={{
-                            flexBasis: '30%',
-                            maxWidth: 1500,
-                            width: 1500,
-                            height: 175,
-                            borderRadius: 10,
-                            boxShadow: 3,
-                            marginY: 2,
-                            marginX: 2,
-                            '@media (max-width: 600px)': {
-                                flexDirection: 'row',
-                            },
-                        }}>
+                    <div className="flex flex-col my-6">
+
+                        <Card className="border-x border-x-4 shadow-lg ">
                             {/* Aquí puedes agregar una imagen si está disponible */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
@@ -62,15 +50,15 @@ export default function Papers() {
                             </CardContent>
                             <CardActions>
                                 <Button
-                                    size="small"
+                                    size="large"
                                     onClick={() => window.open(paper.publicationLink, "_blank")}
-                                >Leer más</Button>
+                                >Ir a la publicación</Button>
                             </CardActions>
                         </Card>
-                    </Grid>
+
                     </div>
                 ))}
-            </Grid>
+            </div>
 
         </Container>
         </>
