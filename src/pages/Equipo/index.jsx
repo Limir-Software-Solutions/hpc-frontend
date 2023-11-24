@@ -43,7 +43,7 @@ const Equipo = () => {
               alt="prueba"
             />
 
-            <div className=" mx-5">
+            <div className="text-justify mx-5">
               <p>
                 Alex Di Genova es Ingeniero en Bioinformática de la Universidad
                 de Talca y Doctor en Ingeniería de Sistemas Complejos de la
@@ -86,7 +86,7 @@ const Equipo = () => {
           style={{ background: "black", height: "2px" }}
         ></hr>
         <div className="flex flex-col my-2">
-          <h1 className="text-2xl my-2">Nuestro Equipo</h1>
+          <h1 className="text-2xl my-2">Equipo de Investigación</h1>
 
           <ProfessorCard
             imagen={"static/images/raul.jpeg"}
@@ -117,7 +117,69 @@ const Equipo = () => {
             rol={"Profesora Asistente"}
             contacto={"carol.moraga@uoh.cl"}
           />
+          <hr
+              color={"black"}
+              size={"2"}
+              width={"100%"}
+              style={{ background: "black", height: "2px" }}
+          ></hr>
+          <h1 className="text-2xl my-2 ">
+            Equipo de Desarrollo
+          </h1>
+          <div className="flex flex-row md:flex-row justify-between">
+            <div className="flex flex-col">
+            <img className="rounded-full"
+                style={{ maxWidth: "200px" }}
+                src="static/images/luis.jpeg"
+                alt="prueba"
+            />
+              <h1 className="text-center">Luis Miranda</h1>
+              <h1 className="text-center">Cum Master</h1>
+            </div>
+
+            <div className="flex flex-col">
+              <img className="rounded-full"
+                   style={{ maxWidth: "200px" }}
+                   src="static/images/ivan.jpeg"
+                   alt="prueba"
+              />
+              <h1 className="text-center">Iván Bozo</h1>
+              <h1 className="text-center">Catador de Anos</h1>
+            </div>
+            <div className="flex flex-col">
+              <img className="rounded-full"
+                   style={{ maxWidth: "200px" }}
+                   src="static/images/lukas.jpeg"
+                   alt="prueba"
+              />
+              <h1 className="text-center">Lukas Flores</h1>
+              <h1 className="text-center">El God</h1>
+            </div>
+            <div className="flex flex-col">
+              <img className="rounded-full"
+                   style={{ maxWidth: "200px" }}
+                   src="static/images/mauri.jpeg"
+                   alt="prueba"
+              />
+              <h1 className="text-center">Mauricio Meza</h1>
+              <h1 className="text-center">El alérgico al sexo</h1>
+            </div>
+            <div className="flex flex-col">
+              <img className="rounded-full"
+                   style={{ maxWidth: "200px" }}
+                   src="static/images/rodri.jpeg"
+                   alt="prueba"
+              />
+              <h1 className="text-center">Rodrigo Llancao</h1>
+              <h1 className="text-center">El adicto al sexo</h1>
+            </div>
+          </div>
+
+
+
+
         </div>
+
       </Container>
     </>
   );
