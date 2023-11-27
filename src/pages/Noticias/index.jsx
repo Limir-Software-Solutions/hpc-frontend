@@ -32,20 +32,28 @@ export default function Noticias() {
         <Container>
 
             <Grid container spacing={4} sx={{
-                marginBottom: "4rem"
+                marginY: "4rem"
             }}>
                 {  articles.map((article, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
-                        <Card>
+                        <Card sx={{
+                            height: '100%',
+                        }}>
                             {article.image && (
                                 <CardMedia
                                     component="img"
-                                    height="140"
                                     image={ article.image.src }
                                     alt={article.image.title}
+                                    sx={{
+                                        height: 300,
+                                    }}
                                 />
                             )}
-                            <CardContent>
+                            <CardContent
+                                sx={{
+                                    height: 200
+                                }}
+                            >
                                 <Typography gutterBottom variant="h5" component="div">
                                     {article.title}
                                 </Typography>

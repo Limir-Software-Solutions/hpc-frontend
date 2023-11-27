@@ -16,7 +16,7 @@ const AcercaDe = () => {
       </div>
       <Container>
         <div className="flex flex-col mb-3  ">
-          <h1 className="text-3xl text-black font-medium text-center my-10 uppercase ">
+          <h1 className="text-3xl text-black font-medium text-center mt-16 mb-10 uppercase ">
             Kütral - Clúster Computacional del Laboratorio de High Performance
             Computing de la UOH
           </h1>
@@ -26,7 +26,7 @@ const AcercaDe = () => {
           escala en la Universidad de O'Higgins (UOH). Nombrado en honor a la
           palabra mapudungun para "fuego", Kütral representa la ardiente
           dedicación a la exploración y el avance en el campo de la genómica.
-          <h1 className="text-xl text-black font-bold text-left my-2">
+          <h1 className="text-xl text-black font-bold text-left mt-8 mb-2">
             Potencia y Especificaciones Técnicas
           </h1>
           Kütral está equipado con una infraestructura robusta que consta de
@@ -38,7 +38,7 @@ const AcercaDe = () => {
           núcleos para tareas complejas de ensamblaje genómico, así como otra
           dotada de 5000 GPU, ideal para implementar modelos de aprendizaje
           automático.
-          <h1 className="text-xl text-black font-bold text-left my-2">
+          <h1 className="text-xl text-black font-bold text-left mt-8 mb-2">
             Tecnología y Optimización
           </h1>
           Funcionando bajo el sistema operativo CentOS 7, Kütral utiliza el
@@ -49,7 +49,7 @@ const AcercaDe = () => {
           especializado en el análisis de datos genómicos, y la plataforma web
           Open OnDemand, facilitan un acceso intuitivo y versátil a los recursos
           informáticos de Kütral desde cualquier dispositivo con navegador.
-          <h1 className="text-xl text-black font-bold text-left my-2 ">
+          <h1 className="text-xl text-black font-bold text-left mt-8 mb-2">
             Capacidad y Contribución a la Investigación Genómica
           </h1>
           Kütral se posiciona como el núcleo vital del compromiso de la UOH con
@@ -65,20 +65,24 @@ const AcercaDe = () => {
         </div>
       </Container>
       <Container>
-        <div className="flex sm:flex-row flex-col  mb-12 justify-between ">
+        <div className="flex sm:flex-row flex-col mt-10 mb-12 justify-between ">
           <Card
             sx={{
               boxShadow: 3,
               backgroundColor: "#0369A1",
               marginX: "26px",
               marginY: "10px",
+              paddingY: "4rem"
+
+
             }}
           >
             <Container>
               <Typography
                 variant="h4"
                 sx={{
-                  marginY: "26px",
+                  marginTop: "2px",
+                  marginBottom: "3rem",
                   color: "#FFFFFF",
                 }}
               >
@@ -106,13 +110,15 @@ const AcercaDe = () => {
               backgroundColor: "#0369A1",
               marginX: "26px",
               marginY: "10px",
+              paddingY: "4rem"
             }}
           >
             <Container>
               <Typography
                 variant="h4"
                 sx={{
-                  marginY: "26px",
+                  marginTop: "2px",
+                  marginBottom: "3rem",
                   color: "#FFFFFF",
                 }}
               >

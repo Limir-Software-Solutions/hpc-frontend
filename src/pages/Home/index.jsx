@@ -17,7 +17,12 @@ export default function Home() {
     <>
       <Carousel slides={slides}/>
       <Container>
-        <div className="justify-between items-center flex my-16 flex-col sm:flex-row">
+        <h1
+          className="text-4xl text-black font-medium text-center my-20 uppercase"
+        >
+          Esta es la información que necesitas saber sobre el HPC
+        </h1>
+        <div className="justify-between items-center flex mb-16 flex-col sm:flex-row">
           <a href="/Equipo">
           <Cards
             imagen="/static/images/Presentación Cluster-10.JPG"

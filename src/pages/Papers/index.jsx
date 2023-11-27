@@ -32,19 +32,25 @@ export default function Papers() {
                 {papers.map((paper, index) => (
                     <div className="flex flex-col my-6">
 
-                        <Card className="border-x border-x-4 shadow-lg ">
+                        <Card className="shadow-lg mb-10">
                             {/* Aquí puedes agregar una imagen si está disponible */}
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     {paper.title}
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    {paper.abstract}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
+                                <Typography variant="body2" color="text.secondary" sx={{
+                                    marginBottom: "1rem",
+                                    fontWeight: "bold"
+                                }}>
                                     Fecha de Publicación: {new Date(paper.publicationDate).toLocaleDateString()}
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
+                                    {paper.abstract}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary" sx={{
+                                    marginTop: "1rem",
+                                    fontWeight: "bold"
+                                }}>
                                     Autores: {paper.authors.map(author => author.name).join(', ')}
                                 </Typography>
                             </CardContent>
