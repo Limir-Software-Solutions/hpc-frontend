@@ -52,7 +52,16 @@ export default function Noticias() {
           }}
         >
           {articles.map((article, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              key={index}
+              sx={{
+                marginY: "3rem",
+              }}
+            >
               <Card
                 sx={{
                   height: "100%",
