@@ -134,7 +134,7 @@ export default function NewsSlider() {
             textTransform: "none",
           }}
         >
-          Ver Mas Noticias <ArrowForwardIcon sx={{ paddingLeft: "5px" }} />
+          Ver más noticias <ArrowForwardIcon sx={{ paddingLeft: "5px" }} />
         </Button>
       </Box>
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import {Container} from "@mui/material";
@@ -21,6 +21,14 @@ export default function NewsDetail() {
     console.log(article)
 
     return (
+        <>
+        <div className="py-20 bg-sky-700 my-4" style={{ position: "relative" }}>
+            <Container>
+                <h1 className="text-3xl text-white font-medium text-left my-2 uppercase ">
+                    Noticias
+                </h1>
+            </Container>
+        </div>
         <Container
             sx={{
                 display: "flex",
@@ -49,5 +57,6 @@ export default function NewsDetail() {
                 {article.description}
             </p>
         </Container>
+        </>
     )
 }

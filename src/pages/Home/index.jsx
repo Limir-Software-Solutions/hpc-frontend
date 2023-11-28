@@ -38,7 +38,7 @@ export default function Home() {
           <span>
             <a href="/AcercaDe" className={"text-blue-500 hover:text-blue-400"}>
               {" "}
-              Mas informacion
+              Más información
             </a>
           </span>
         </p>
@@ -62,11 +62,11 @@ export default function Home() {
               texto="Conoce al equipo de investigación detrás de todos los avances, proyectos y publicaciones que han sido posibles gracias al uso de nuestro HPC."
             />
           </a>
-          <a href="/Noticias">
+          <a href="/Papers">
             <Cards
-              imagen="/static/images/noti.png"
-              titulo="Noticias"
-              texto="Las últimas noticias con relación a nuestro HPC que van desde las recientes investigaciones del equipo hasta noticias internacionales afines a los intereses del laboratorio."
+              imagen="/static/images/Presentación Cluster-12.JPG"
+              titulo="Publicaciones"
+              texto="Publicaciones más recientes de nuestro equipo de investigación conformado tanto por profesores como por estudiantes de pre y postgrado."
             />
           </a>
 

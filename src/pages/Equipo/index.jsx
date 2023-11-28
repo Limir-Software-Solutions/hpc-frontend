@@ -22,7 +22,7 @@ const Equipo = () => {
             style={{ background: "black", height: "2px" }}
           ></hr>
 
-          <p>
+          <p className="font-bold text-xl">
             {" "}
             El equipo central del HPC reside en el Instituto de Ciencias de la
             Ingeniería (ICI) y el clúster de cómputo en el Laboratorio HPC en el
@@ -35,7 +35,7 @@ const Equipo = () => {
                     marginTop: "3rem",
                 }}
             >
-          <h1 className="text-2xl my-5">Director</h1>
+          <h1 className="text-2xl font-bold my-5">Director</h1>
           <div className="flex flex-col md:flex-row justify-between">
             <img
               style={{ maxWidth: "400px" }}
@@ -86,7 +86,7 @@ const Equipo = () => {
           style={{ background: "black", height: "2px" }}
         ></hr>
         <div className="flex flex-col my-2">
-          <h1 className="text-2xl my-2">Equipo de Investigación</h1>
+          <h1 className="text-2xl font-bold my-2">Equipo de Investigación</h1>
 
           <ProfessorCard
             imagen={"static/images/raul.jpeg"}
@@ -123,7 +123,7 @@ const Equipo = () => {
               width={"100%"}
               style={{ background: "black", height: "2px" }}
           ></hr>
-          <h1 className="text-2xl my-4 ">
+          <h1 className="text-2xl font-bold my-4 ">
             Equipo de Desarrollo
           </h1>
           <div className="flex flex-col md:flex-row justify-between my-4">

@@ -64,7 +64,7 @@ const Contact = () => {
             </Container>
         </div>
         <Container>
-        <div className="flex md:flex-row flex-col md:-mb-96 mb-12 justify-between mt-28 h-screen">
+        <div className="flex md:flex-row flex-col md:-mb-96 mb-12 justify-between mt-28 ">
             <div className="flex flex-col w-full mx-auto">
                 <h1 className="text-2xl font-normal text-left my-2 ">
                 No dude en contactarnos si tiene alguna consulta o propuesta respecto a los servicios o actividades del HPC-UOH.
@@ -79,7 +79,7 @@ const Contact = () => {
                         <p className=" font-bold text-left my-2 uppercase ">
                             Oficina</p>
                         <p>Universidad de O'Higgins </p>
-                        <p>Av. Libertador Bernardo O'Higgins, </p>
+                        <p>Av. Libertador Bernardo O'Higgins 611, </p>
                         <p>Rancagua </p>
                         
                     </div>
@@ -137,12 +137,16 @@ const Contact = () => {
 
                 </div>
 
+
+
             </Container>
-            <div className="flex flex-col w-full h-screen">
-                <iframe style={{height:"100%" , position:"sticky"}}
+            <div className="flex mt-96 my-2 flex-col w-full h-screen ">
+                <iframe style={{height:"100%" ,position:"sticky", marginTop:"2rem"}}
                         src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Universidad de O'Higgins&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 />
             </div>
+
+
         </>
     );
 };

@@ -3,7 +3,7 @@ import {Container} from '@mui/material';
 
 const Footer = () => {
     return (
-      <footer className="py-8 bg-black" style={{ position: "relative" }}>
+      <footer className="py-8 bg-black flex-col flex" style={{ position: "relative" }}>
         <Container
           sx={{
             display: 'flex',
@@ -12,9 +12,9 @@ const Footer = () => {
           }}
         >
           <div
-            className="flex flex-col justify-center"
+            className="flex flex-col justify-center "
           >
-            <img style={{maxWidth:"190px"}} src="static/images/logo3.png" alt="prueba"/>
+            <img style={{maxWidth:"170px"}} src="static/images/logo3.png" alt="prueba"/>
           </div>
 
           <div
