@@ -86,7 +86,7 @@ const Header = () => {
 
                 <a
                   href="/Noticias"
-                  className="hover:text-gray-500 mx-5 font-bold"
+                  className="hover:text-gray-500 mx-5 "
                   style={{
                     color: pathname === "/noticias" ? "#2563EB" : "black",
                   }}
@@ -95,7 +95,7 @@ const Header = () => {
                 </a>
                 <a
                   href="/Papers"
-                  className="hover:text-gray-500 mx-5 font-bold"
+                  className="hover:text-gray-500 mx-5 "
                   style={{
                     color: pathname === "/papers" ? "#2563EB" : "black",
                   }}
@@ -104,7 +104,7 @@ const Header = () => {
                 </a>
                 <a
                   href="/Contact"
-                  className="hover:text-gray-500 mx-5 font-bold"
+                  className="hover:text-gray-500 mx-5 "
                   style={{
                     color: pathname === "/contacto" ? "#2563EB" : "black",
                   }}
